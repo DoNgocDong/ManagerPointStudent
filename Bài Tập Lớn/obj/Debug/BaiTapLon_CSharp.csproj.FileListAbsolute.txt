@@ -1,0 +1,14 @@
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.AssemblyReference.cache
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.SuggestedBindingRedirects.cache
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.LoginForm.resources
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.FormRepair.resources
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.Properties.Resources.resources
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.GenerateResource.cache
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.CoreCompileInputs.cache
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.exe.config
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.exe
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.pdb
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.exe
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.pdb
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.LoginMethod.resources
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.HomePage.resources
