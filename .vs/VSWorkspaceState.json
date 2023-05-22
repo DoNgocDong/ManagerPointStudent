@@ -1,8 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Bài Tập Lớn"
+    "\\Bài Tập Lớn",
+    "\\Bài Tập Lớn\\bin",
+    "\\Bài Tập Lớn\\bin\\Debug",
+    "\\Bài Tập Lớn\\bin\\Release",
+    "\\Bài Tập Lớn\\obj",
+    "\\Bài Tập Lớn\\src",
+    "\\Bài Tập Lớn\\src\\Forms"
   ],
-  "SelectedNode": "\\Bài Tập Lớn\\Form3.cs",
+  "SelectedNode": "\\Bài Tập Lớn.sln",
   "PreviewInSolutionExplorer": false
 }

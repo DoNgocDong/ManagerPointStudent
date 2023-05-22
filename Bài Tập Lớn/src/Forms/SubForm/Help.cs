@@ -16,5 +16,10 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
