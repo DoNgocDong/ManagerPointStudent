@@ -64,6 +64,48 @@
     <Compile Include="src\Controller\Forms\FormController.cs" />
     <Compile Include="src\Controller\Login\LoginController.cs" />
     <Compile Include="src\Database\ConnectDB.cs" />
+    <Compile Include="src\Forms\MainForm\ManagerClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\ManagerClass.Designer.cs">
+      <DependentUpon>ManagerClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\ManagerCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\ManagerCourse.Designer.cs">
+      <DependentUpon>ManagerCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\ManagerScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\ManagerScore.Designer.cs">
+      <DependentUpon>ManagerScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\ManagerStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\ManagerStudent.Designer.cs">
+      <DependentUpon>ManagerStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\ViewForAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\ViewForAdmin.Designer.cs">
+      <DependentUpon>ViewForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\ViewProfileStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\ViewProfileStudent.Designer.cs">
+      <DependentUpon>ViewProfileStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\ViewScoreStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\ViewScoreStudent.Designer.cs">
+      <DependentUpon>ViewScoreStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\Forms\SubForm\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +145,12 @@
     <Compile Include="src\Globals.cs" />
     <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="src\Forms\MainForm\ManagerStudent.resx">
+      <DependentUpon>ManagerStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\MainForm\ViewForAdmin.resx">
+      <DependentUpon>ViewForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\SubForm\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>

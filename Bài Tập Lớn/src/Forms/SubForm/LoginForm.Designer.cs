@@ -118,9 +118,11 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm
             // eyePictureBox
             // 
             this.eyePictureBox.BackColor = System.Drawing.Color.White;
+            this.eyePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.eyePictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.eyePictureBox.Image = global::BaiTapLon_CSharp.Properties.Resources.hideEye;
             this.eyePictureBox.Location = new System.Drawing.Point(322, 233);
+            this.eyePictureBox.Margin = new System.Windows.Forms.Padding(0);
             this.eyePictureBox.Name = "eyePictureBox";
             this.eyePictureBox.Size = new System.Drawing.Size(29, 27);
             this.eyePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -178,7 +180,6 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm
             this.Controls.Add(this.logoUTT);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.Color.Coral;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;

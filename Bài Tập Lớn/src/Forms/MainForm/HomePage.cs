@@ -19,6 +19,11 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
         {
             InitializeComponent();
         }
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+            if(Globals.isAdmin == false)
+                managerToolStripMenuItem.Visible = false;
+        }
 
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -52,6 +57,63 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
             ChangePassword changePassword = new ChangePassword();
 
             formController.addForm(changePassword, displayMenuFormPanel);
+        }
+
+        private void manaStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManagerStudent managerStudent = new ManagerStudent();
+
+            formController.addForm(managerStudent, displayMenuFormPanel);
+        }
+
+        private void manaClassToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManagerClass managerClass = new ManagerClass();
+
+            formController.addForm(managerClass, displayMenuFormPanel);
+        }
+
+        private void manaCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManagerCourse managerCourse = new ManagerCourse();
+
+            formController.addForm(managerCourse, displayMenuFormPanel);
+        }
+
+        private void manaScoreStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManagerScore managerScore = new ManagerScore();
+
+            formController.addForm(managerScore, displayMenuFormPanel);
+        }
+
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(Globals.isAdmin)
+            {
+                ViewForAdmin viewForAdmin = new ViewForAdmin();
+                formController.addForm(viewForAdmin, displayMenuFormPanel);
+            }
+            else
+            {
+                ViewProfileStudent viewProfileStudent = new ViewProfileStudent();
+                formController.addForm(viewProfileStudent, displayMenuFormPanel);
+            }
+
+        }
+
+        private void viewScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Globals.isAdmin)
+            {
+                ViewForAdmin viewForAdmin = new ViewForAdmin();
+                formController.addForm(viewForAdmin, displayMenuFormPanel);
+            }
+            else
+            {
+                ViewScoreStudent viewScoreStudent = new ViewScoreStudent();
+                formController.addForm(viewScoreStudent, displayMenuFormPanel);
+            }
         }
     }
 }

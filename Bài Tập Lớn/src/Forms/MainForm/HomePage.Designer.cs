@@ -37,7 +37,7 @@
             this.manaClassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manaCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manaScoreStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +51,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.actionToolStripMenuItem,
             this.managerToolStripMenuItem,
-            this.hệThốngToolStripMenuItem,
+            this.systemToolStripMenuItem,
             this.helpToolStripMenuItem,
             this.exitToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -72,14 +72,16 @@
             // viewProfileToolStripMenuItem
             // 
             this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewProfileToolStripMenuItem.Text = "Xem hồ sơ";
+            this.viewProfileToolStripMenuItem.Click += new System.EventHandler(this.viewProfileToolStripMenuItem_Click);
             // 
             // viewScoreToolStripMenuItem
             // 
             this.viewScoreToolStripMenuItem.Name = "viewScoreToolStripMenuItem";
-            this.viewScoreToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.viewScoreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewScoreToolStripMenuItem.Text = "Xem điểm";
+            this.viewScoreToolStripMenuItem.Click += new System.EventHandler(this.viewScoreToolStripMenuItem_Click);
             // 
             // managerToolStripMenuItem
             // 
@@ -95,35 +97,39 @@
             // manaStudentToolStripMenuItem
             // 
             this.manaStudentToolStripMenuItem.Name = "manaStudentToolStripMenuItem";
-            this.manaStudentToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.manaStudentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manaStudentToolStripMenuItem.Text = "Sinh viên";
+            this.manaStudentToolStripMenuItem.Click += new System.EventHandler(this.manaStudentToolStripMenuItem_Click);
             // 
             // manaClassToolStripMenuItem
             // 
             this.manaClassToolStripMenuItem.Name = "manaClassToolStripMenuItem";
-            this.manaClassToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.manaClassToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manaClassToolStripMenuItem.Text = "Lớp học";
+            this.manaClassToolStripMenuItem.Click += new System.EventHandler(this.manaClassToolStripMenuItem_Click);
             // 
             // manaCourseToolStripMenuItem
             // 
             this.manaCourseToolStripMenuItem.Name = "manaCourseToolStripMenuItem";
-            this.manaCourseToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.manaCourseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manaCourseToolStripMenuItem.Text = "Môn học";
+            this.manaCourseToolStripMenuItem.Click += new System.EventHandler(this.manaCourseToolStripMenuItem_Click);
             // 
             // manaScoreStripMenuItem
             // 
             this.manaScoreStripMenuItem.Name = "manaScoreStripMenuItem";
-            this.manaScoreStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.manaScoreStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manaScoreStripMenuItem.Text = "Điểm";
+            this.manaScoreStripMenuItem.Click += new System.EventHandler(this.manaScoreStripMenuItem_Click);
             // 
-            // hệThốngToolStripMenuItem
+            // systemToolStripMenuItem
             // 
-            this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.systemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.changePasswordToolStripMenuItem,
             this.logOutToolStripMenuItem});
-            this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.hệThốngToolStripMenuItem.Text = "Hệ thống";
+            this.systemToolStripMenuItem.Name = "systemToolStripMenuItem";
+            this.systemToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.systemToolStripMenuItem.Text = "Hệ thống";
             // 
             // changePasswordToolStripMenuItem
             // 
@@ -178,6 +184,7 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
+            this.Load += new System.EventHandler(this.HomePage_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -195,7 +202,7 @@
         private System.Windows.Forms.ToolStripMenuItem manaClassToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manaCourseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manaScoreStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hệThốngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem systemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;

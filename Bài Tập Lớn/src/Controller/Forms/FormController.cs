@@ -26,6 +26,7 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
             childForm.AutoScroll = true;
             childForm.FormBorderStyle= FormBorderStyle.None;
             childForm.Dock= DockStyle.Fill;
+            placeShow.Controls.Clear();
             placeShow.Controls.Add(childForm);
             childForm.Show();
         }
