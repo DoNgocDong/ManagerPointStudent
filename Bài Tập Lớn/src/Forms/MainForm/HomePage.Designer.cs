@@ -95,25 +95,25 @@
             // manaStudentToolStripMenuItem
             // 
             this.manaStudentToolStripMenuItem.Name = "manaStudentToolStripMenuItem";
-            this.manaStudentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manaStudentToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.manaStudentToolStripMenuItem.Text = "Sinh viên";
             // 
             // manaClassToolStripMenuItem
             // 
             this.manaClassToolStripMenuItem.Name = "manaClassToolStripMenuItem";
-            this.manaClassToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manaClassToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.manaClassToolStripMenuItem.Text = "Lớp học";
             // 
             // manaCourseToolStripMenuItem
             // 
             this.manaCourseToolStripMenuItem.Name = "manaCourseToolStripMenuItem";
-            this.manaCourseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manaCourseToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.manaCourseToolStripMenuItem.Text = "Môn học";
             // 
             // manaScoreStripMenuItem
             // 
             this.manaScoreStripMenuItem.Name = "manaScoreStripMenuItem";
-            this.manaScoreStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manaScoreStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.manaScoreStripMenuItem.Text = "Điểm";
             // 
             // hệThốngToolStripMenuItem
@@ -128,14 +128,16 @@
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.changePasswordToolStripMenuItem.Text = "Đổi mật khẩu";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logOutToolStripMenuItem.Text = "Đăng xuất";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 

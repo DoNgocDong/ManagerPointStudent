@@ -103,6 +103,16 @@ namespace BaiTapLon_CSharp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hideEye {
+            get {
+                object obj = ResourceManager.GetObject("hideEye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconLecturer {
             get {
                 object obj = ResourceManager.GetObject("iconLecturer", resourceCulture);
@@ -196,6 +206,16 @@ namespace BaiTapLon_CSharp.Properties {
         internal static System.Drawing.Bitmap oke {
             get {
                 object obj = ResourceManager.GetObject("oke", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap showEye {
+            get {
+                object obj = ResourceManager.GetObject("showEye", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

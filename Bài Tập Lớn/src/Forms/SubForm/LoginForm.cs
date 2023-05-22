@@ -17,7 +17,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm
     public partial class LoginForm : Form
     {
         private FormController formController = new FormController();
-        Login controller = new Login();
+        private Login loginController = new Login();
         public LoginForm()
         {
             InitializeComponent();
@@ -36,6 +36,11 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm
             LoginMethod loginMethod = new LoginMethod();
 
             formController.closeAndShow(this, loginMethod);
+        }
+
+        private void eyePictureBox_Click(object sender, EventArgs e)
+        {
+            loginController.handleChangeStatusPassword(userPassword, eyePictureBox);
         }
     }
 }

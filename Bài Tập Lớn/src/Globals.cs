@@ -6,10 +6,21 @@ using System.Threading.Tasks;
 
 namespace BaiTapLon_CSharp.src
 {
+    //Lớp lưu trữ các biến toàn cục
     public static class Globals
     {
+        //quyền truy cập
         public static bool isAdmin = false;
-        public static string tableAdmin = "TkAdmin";
-        public static string tableStudent = "TkSinhVien";
+
+        //tài khoản hiện hành
+        public static string currentAccount = "";
+
+        //lưu trữ tên bảng trong db
+        public static string tableAdminAccount = "TkAdmin";
+        public static string tableStudentAccount = "TkSinhVien";
+        public static string tableStudent = "SinhVien";
+        public static string tableClass = "Lop";
+        public static string tableScore = "Diem";
+        public static string tableCourse = "MonHoc";
     }
 }

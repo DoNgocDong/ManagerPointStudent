@@ -33,5 +33,36 @@ namespace BaiTapLon_CSharp.src.Controller.Login
                 }
             }
         }
+
+        public void changePassword(string userName, string userPass, string tableUser)
+        {
+            using (SqlConnection connection = new SqlConnection(connectString))
+            {
+                connection.Open();
+
+                string query = $"UPDATE {tableUser} SET userPassword = @userPass WHERE userName = @userName";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@userName", userName);
+                    command.Parameters.AddWithValue("@userPass", userPass);
+                    
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void handleChangeStatusPassword(TextBox txtPassword, PictureBox pictureBox)
+        {
+            if(txtPassword.PasswordChar == '*')
+            {
+                pictureBox.Image = global::BaiTapLon_CSharp.Properties.Resources.showEye;
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                pictureBox.Image = global::BaiTapLon_CSharp.Properties.Resources.hideEye;
+                txtPassword.PasswordChar = '*';
+            }
+        }
     }
 }
