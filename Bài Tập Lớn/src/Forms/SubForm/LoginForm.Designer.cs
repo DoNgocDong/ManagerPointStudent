@@ -210,6 +210,8 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm
             if (loginController.CheckLogin(adminName, adminPassword, table))
             {
                 Globals.currentAccount = adminName;
+                Globals.currentTableUserAccount = table;
+
                 HomePage homePage = new HomePage();
                 formController.closeAndShow(this, homePage);
             }
@@ -227,6 +229,8 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm
             if (loginController.CheckLogin(userName, userPassword, table))
             {
                 Globals.currentAccount = userName;
+                Globals.currentTableUserAccount = table;
+
                 HomePage homePage = new HomePage();
                 formController.closeAndShow(this, homePage);
             }

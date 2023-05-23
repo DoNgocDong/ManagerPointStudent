@@ -39,7 +39,10 @@
             this.newPasswordTxt = new System.Windows.Forms.TextBox();
             this.eyeConfirmPass = new System.Windows.Forms.PictureBox();
             this.confirmPasswordTxt = new System.Windows.Forms.TextBox();
-            this.checkNewPassBtn = new System.Windows.Forms.Button();
+            this.statusOldPassLabel = new System.Windows.Forms.Label();
+            this.statusNewPassLabel = new System.Windows.Forms.Label();
+            this.statusConfirmPassLabel = new System.Windows.Forms.Label();
+            this.checkChangePassBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.eyeOldPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyeNewPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyeConfirmPass)).BeginInit();
@@ -91,11 +94,11 @@
             this.changePasswordBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.changePasswordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.changePasswordBtn.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changePasswordBtn.Location = new System.Drawing.Point(260, 303);
+            this.changePasswordBtn.Location = new System.Drawing.Point(284, 294);
             this.changePasswordBtn.Name = "changePasswordBtn";
             this.changePasswordBtn.Size = new System.Drawing.Size(139, 39);
             this.changePasswordBtn.TabIndex = 7;
-            this.changePasswordBtn.Text = "Lưu mật khẩu";
+            this.changePasswordBtn.Text = "Đổi mật khẩu";
             this.changePasswordBtn.UseVisualStyleBackColor = false;
             this.changePasswordBtn.Click += new System.EventHandler(this.changePasswordBtn_Click);
             // 
@@ -110,6 +113,7 @@
             this.eyeOldPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.eyeOldPass.TabIndex = 9;
             this.eyeOldPass.TabStop = false;
+            this.eyeOldPass.Click += new System.EventHandler(this.eyeOldPass_Click);
             // 
             // oldPasswordTxt
             // 
@@ -134,6 +138,7 @@
             this.eyeNewPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.eyeNewPass.TabIndex = 11;
             this.eyeNewPass.TabStop = false;
+            this.eyeNewPass.Click += new System.EventHandler(this.eyeNewPass_Click);
             // 
             // newPasswordTxt
             // 
@@ -158,6 +163,7 @@
             this.eyeConfirmPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.eyeConfirmPass.TabIndex = 13;
             this.eyeConfirmPass.TabStop = false;
+            this.eyeConfirmPass.Click += new System.EventHandler(this.eyeConfirmPass_Click);
             // 
             // confirmPasswordTxt
             // 
@@ -171,19 +177,55 @@
             this.confirmPasswordTxt.Size = new System.Drawing.Size(302, 27);
             this.confirmPasswordTxt.TabIndex = 12;
             // 
-            // checkNewPassBtn
+            // statusOldPassLabel
             // 
-            this.checkNewPassBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.checkNewPassBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkNewPassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkNewPassBtn.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkNewPassBtn.Location = new System.Drawing.Point(497, 303);
-            this.checkNewPassBtn.Name = "checkNewPassBtn";
-            this.checkNewPassBtn.Size = new System.Drawing.Size(104, 39);
-            this.checkNewPassBtn.TabIndex = 14;
-            this.checkNewPassBtn.Text = "Kiểm tra";
-            this.checkNewPassBtn.UseVisualStyleBackColor = false;
-            this.checkNewPassBtn.Click += new System.EventHandler(this.checkNewPassBtn_Click);
+            this.statusOldPassLabel.AutoSize = true;
+            this.statusOldPassLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusOldPassLabel.ForeColor = System.Drawing.Color.Black;
+            this.statusOldPassLabel.Location = new System.Drawing.Point(355, 117);
+            this.statusOldPassLabel.Name = "statusOldPassLabel";
+            this.statusOldPassLabel.Size = new System.Drawing.Size(40, 15);
+            this.statusOldPassLabel.TabIndex = 14;
+            this.statusOldPassLabel.Text = "status";
+            this.statusOldPassLabel.Visible = false;
+            // 
+            // statusNewPassLabel
+            // 
+            this.statusNewPassLabel.AutoSize = true;
+            this.statusNewPassLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusNewPassLabel.ForeColor = System.Drawing.Color.Black;
+            this.statusNewPassLabel.Location = new System.Drawing.Point(355, 181);
+            this.statusNewPassLabel.Name = "statusNewPassLabel";
+            this.statusNewPassLabel.Size = new System.Drawing.Size(40, 15);
+            this.statusNewPassLabel.TabIndex = 15;
+            this.statusNewPassLabel.Text = "status";
+            this.statusNewPassLabel.Visible = false;
+            // 
+            // statusConfirmPassLabel
+            // 
+            this.statusConfirmPassLabel.AutoSize = true;
+            this.statusConfirmPassLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusConfirmPassLabel.ForeColor = System.Drawing.Color.Black;
+            this.statusConfirmPassLabel.Location = new System.Drawing.Point(355, 245);
+            this.statusConfirmPassLabel.Name = "statusConfirmPassLabel";
+            this.statusConfirmPassLabel.Size = new System.Drawing.Size(40, 15);
+            this.statusConfirmPassLabel.TabIndex = 16;
+            this.statusConfirmPassLabel.Text = "status";
+            this.statusConfirmPassLabel.Visible = false;
+            // 
+            // checkChangePassBtn
+            // 
+            this.checkChangePassBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.checkChangePassBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkChangePassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkChangePassBtn.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkChangePassBtn.Location = new System.Drawing.Point(485, 294);
+            this.checkChangePassBtn.Name = "checkChangePassBtn";
+            this.checkChangePassBtn.Size = new System.Drawing.Size(123, 39);
+            this.checkChangePassBtn.TabIndex = 17;
+            this.checkChangePassBtn.Text = "Kiểm tra";
+            this.checkChangePassBtn.UseVisualStyleBackColor = false;
+            this.checkChangePassBtn.Click += new System.EventHandler(this.checkChangePassBtn_Click);
             // 
             // ChangePassword
             // 
@@ -191,7 +233,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(856, 400);
-            this.Controls.Add(this.checkNewPassBtn);
+            this.Controls.Add(this.checkChangePassBtn);
+            this.Controls.Add(this.statusConfirmPassLabel);
+            this.Controls.Add(this.statusNewPassLabel);
+            this.Controls.Add(this.statusOldPassLabel);
             this.Controls.Add(this.eyeConfirmPass);
             this.Controls.Add(this.confirmPasswordTxt);
             this.Controls.Add(this.eyeNewPass);
@@ -226,6 +271,9 @@
         private System.Windows.Forms.TextBox newPasswordTxt;
         private System.Windows.Forms.PictureBox eyeConfirmPass;
         private System.Windows.Forms.TextBox confirmPasswordTxt;
-        private System.Windows.Forms.Button checkNewPassBtn;
+        private System.Windows.Forms.Label statusOldPassLabel;
+        private System.Windows.Forms.Label statusNewPassLabel;
+        private System.Windows.Forms.Label statusConfirmPassLabel;
+        private System.Windows.Forms.Button checkChangePassBtn;
     }
 }

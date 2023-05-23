@@ -1,5 +1,6 @@
 ﻿using BaiTapLon_CSharp.src.Controller.Forms;
 using BaiTapLon_CSharp.src.Controller.Login;
+using BaiTapLon_CSharp.src.Database;
 using BaiTapLon_CSharp.src.Forms.MainForm;
 using System;
 using System.Collections.Generic;
@@ -15,29 +16,113 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm
 {
     public partial class ChangePassword : Form
     {
-        private Login loginConroller = new Login();
+        private Login loginController = new Login();
+        private ConnectDB dbController = new ConnectDB();
+
+        string tableUserAccount = Globals.currentTableUserAccount;
+        string userName = Globals.currentAccount;
+
         public ChangePassword()
         {
             InitializeComponent();
         }
 
+        private void eyeOldPass_Click(object sender, EventArgs e)
+        {
+            loginController.handleChangeStatusPassword(oldPasswordTxt, eyeOldPass);
+        }
+
+        private void eyeNewPass_Click(object sender, EventArgs e)
+        {
+            loginController.handleChangeStatusPassword(newPasswordTxt, eyeNewPass);
+        }
+
+        private void eyeConfirmPass_Click(object sender, EventArgs e)
+        {
+            loginController.handleChangeStatusPassword(confirmPasswordTxt, eyeConfirmPass);
+        }
+
         private void changePasswordBtn_Click(object sender, EventArgs e)
         {
-            string newPassword = newPasswordTxt.Text.Trim();
+            string oldPassword = oldPasswordTxt.Text.Trim();
+            string newUserPassword = newPasswordTxt.Text.Trim();
 
             DialogResult result = MessageBox.Show("Bạn có chắc muốn đổi mật khẩu?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            switch (result)
+            if (newUserPassword == "")
             {
-                case DialogResult.Yes:
-                    break;
-                case DialogResult.No:
-                    break;
+                MessageBox.Show("Bạn phải nhập mật khẩu mới", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                newPasswordTxt.Focus();
+            }
+            else
+            {
+                try
+                {
+                    switch (result)
+                    {
+                        case DialogResult.Yes:
+                            bool check = loginController.changePassword(userName, oldPassword, newUserPassword, tableUserAccount);
+
+                            if (check)
+                                MessageBox.Show("Đổi mật khẩu thành công", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            else
+                                MessageBox.Show("Đổi mật khẩu thất bại", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+
+                        case DialogResult.No:
+                            break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
-        private void checkNewPassBtn_Click(object sender, EventArgs e)
+        private void checkChangePassBtn_Click(object sender, EventArgs e)
         {
+            string oldPassword = oldPasswordTxt.Text.Trim();
+            string newUserPassword = newPasswordTxt.Text.Trim();
+            string confirmPassword = confirmPasswordTxt.Text.Trim();
 
+            bool checkOldPass = dbController.checkExistValueInDatabase(oldPassword, "userPassword", tableUserAccount);
+            bool checkConfirmPass = confirmPassword == newUserPassword;
+
+            if(newUserPassword == "")
+            {
+                statusNewPassLabel.Text = "Chưa nhập mật khẩu mới";
+                statusNewPassLabel.ForeColor = Color.Red;
+            }
+            else
+            {
+                statusNewPassLabel.Text = "OK";
+                statusNewPassLabel.ForeColor = Color.Green;
+            }
+            statusNewPassLabel.Visible = true;
+
+            if (checkOldPass)
+            {
+                statusOldPassLabel.Text = "Đúng";
+                statusOldPassLabel.ForeColor = Color.Green;
+            }
+            else
+            {
+                statusOldPassLabel.Text = "Sai mật khẩu";
+                statusOldPassLabel.ForeColor = Color.Red;
+            }
+            statusOldPassLabel.Visible = true;
+
+            if (checkConfirmPass)
+            {
+                statusConfirmPassLabel.Text = "Đúng";
+                statusConfirmPassLabel.ForeColor = Color.Green;
+            }
+            else
+            {
+                statusConfirmPassLabel.Text = "Không trùng lặp";
+                statusConfirmPassLabel.ForeColor = Color.Red;
+            }
+            statusConfirmPassLabel.Visible = true;
         }
     }
 }

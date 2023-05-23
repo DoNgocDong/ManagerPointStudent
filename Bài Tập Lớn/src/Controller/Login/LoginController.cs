@@ -34,19 +34,22 @@ namespace BaiTapLon_CSharp.src.Controller.Login
             }
         }
 
-        public void changePassword(string userName, string newPassword, string tableUser)
+        public bool changePassword(string userName, string oldPassword, string newPassword, string tableUser)
         {
             using (SqlConnection connection = new SqlConnection(connectString))
             {
                 connection.Open();
 
-                string query = $"UPDATE {tableUser} SET userPassword = @newPass WHERE userName = @userName";
+                string query = $"UPDATE {tableUser} SET userPassword = @newPass WHERE userName = @userName AND userPassword = @oldPass";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@userName", userName);
                     command.Parameters.AddWithValue("@newPass", newPassword);
-                    
-                    command.ExecuteNonQuery();
+                    command.Parameters.AddWithValue("@oldPass", oldPassword);
+
+                    int i = command.ExecuteNonQuery();
+
+                    return i > 0;
                 }
             }
         }

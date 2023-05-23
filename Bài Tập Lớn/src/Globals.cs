@@ -9,11 +9,14 @@ namespace BaiTapLon_CSharp.src
     //Lớp lưu trữ các biến toàn cục
     public static class Globals
     {
+        public static string serverName = System.Environment.MachineName + "\\SQLEXPRESS";
+
         //quyền truy cập
         public static bool isAdmin = false;
 
         //tài khoản hiện hành
         public static string currentAccount = "";
+        public static string currentTableUserAccount = "";
 
         //lưu trữ tên bảng trong db
         public static string tableAdminAccount = "TkAdmin";
