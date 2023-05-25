@@ -9,7 +9,7 @@ namespace BaiTapLon_CSharp.src.Database
 {
     public class ConnectDB
     {
-        private string stringConnection = "Data Source=DESKTOP-UE2RN9I\\SQLEXPRESS;Initial Catalog=QLDiemSinhVien;Integrated Security=True";
+        private string stringConnection = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=QLDiemSinhVien;Integrated Security=True";
 
         public ConnectDB() {}
 

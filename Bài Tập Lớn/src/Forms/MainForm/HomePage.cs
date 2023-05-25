@@ -115,5 +115,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
                 formController.addForm(viewScoreStudent, displayMenuFormPanel);
             }
         }
+
+      
     }
 }

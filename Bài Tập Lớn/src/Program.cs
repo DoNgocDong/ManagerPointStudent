@@ -1,6 +1,8 @@
 ﻿using BaiTapLon_CSharp.src.Forms.MainForm;
+using BaiTapLon_CSharp.src.Forms.SubForm.subManagerScoure;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +19,7 @@ namespace BaiTapLon_CSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginMethod());
+            Application.Run(new Add());
         }
     }
 }
