@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BaiTapLon_CSharp.src.Forms.SubForm.subManagerScoure
 {
@@ -55,6 +56,14 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.subManagerScoure
             String diemTK = txtdiemTK.Text.Trim();
             String diemchu = txtdiemchu.Text.Trim();
             String danhgia = txtdanhgia.Text.Trim();
+            int kp = 0;
+            checkmasv(masv, ref kp);
+            if (kp == 1)
+            {
+                txtmasv.Focus();
+                MessageBox.Show("Trùng mã sinh viên");
+                return;
+            }
             using (SqlConnection connection = new SqlConnection(con))
             {
                 connection.Open();
@@ -71,7 +80,24 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.subManagerScoure
                 }
             }
         }
+        private void checkmasv(String masv, ref int p_kq)
+        {
+            using (SqlConnection connection = new SqlConnection(con))
+            {
+                connection.Open();
 
+                string query = "Check_trungmasv";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add("@maSinhVien", SqlDbType.NVarChar, 20).Value = masv;
+                    SqlParameter kq = new SqlParameter("@ketqua", SqlDbType.Int);
+                    command.Parameters.Add(kq).Direction = ParameterDirection.Output;
+                    command.ExecuteNonQuery();
+                    p_kq = (int)kq.Value;
+                }
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtID.Text.Trim());

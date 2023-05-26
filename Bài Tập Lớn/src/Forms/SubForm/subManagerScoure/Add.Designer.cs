@@ -175,6 +175,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(69, 27);
             this.txtID.TabIndex = 18;
+            this.txtID.Visible = false;
             // 
             // groupBox1
             // 
@@ -312,6 +313,7 @@
             this.label2.Size = new System.Drawing.Size(30, 22);
             this.label2.TabIndex = 21;
             this.label2.Text = "ID";
+            this.label2.Visible = false;
             // 
             // label11
             // 
