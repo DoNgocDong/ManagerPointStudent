@@ -10,7 +10,7 @@ namespace BaiTapLon_CSharp.src.Database
 {
     public class ConnectDB
     {
-        private string stringConnection = $"Data Source= {Globals.serverName};Initial Catalog=QLDiemSinhVien;Integrated Security=True";
+        private string stringConnection = $"Data Source= {Globals.databaseServerName};Initial Catalog=QLDiemSinhVien;Integrated Security=True";
 
         public ConnectDB() {}
 

@@ -23,6 +23,9 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
         {
             if(Globals.isAdmin == false)
                 managerToolStripMenuItem.Visible = false;
+
+            Welcome welcome = new Welcome();
+            formController.addForm(welcome, displayMenuFormPanel);
         }
 
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)

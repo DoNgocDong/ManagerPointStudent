@@ -106,6 +106,12 @@
     <Compile Include="src\Forms\MainForm\ViewScoreStudent.Designer.cs">
       <DependentUpon>ViewScoreStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\Forms\MainForm\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\Forms\SubForm\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,13 @@
     <Compile Include="src\Forms\MainForm\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\Forms\SubForm\ManagerStudent\ActionDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\SubForm\ManagerStudent\ActionDetail.Designer.cs">
+      <DependentUpon>ActionDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\SubForm\ManagerStudent\ManagerStudent.varEnv.cs" />
     <Compile Include="src\Forms\SubForm\Update.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +164,9 @@
     <EmbeddedResource Include="src\Forms\MainForm\ViewForAdmin.resx">
       <DependentUpon>ViewForAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\MainForm\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\SubForm\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\MainForm\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\SubForm\ManagerStudent\ActionDetail.resx">
+      <DependentUpon>ActionDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\SubForm\Update.resx">
       <DependentUpon>Update.cs</DependentUpon>
@@ -254,6 +273,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hideEye.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Welcome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
