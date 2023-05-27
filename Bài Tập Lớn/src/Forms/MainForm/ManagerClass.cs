@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
                 }
             }
         }
+        PrivateFontCollection pfc;
         private void ManagerClass_Load(object sender, EventArgs e)
         {
             load_gvrlophoc();
@@ -55,6 +57,9 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
             btXacNhan.Enabled = false;
             txtGVCN.Enabled = false; txtKhoa.Enabled = false; txtMalop.Enabled = false;
             txtTenLop.Enabled = false; txtTenNganh.Enabled = false;
+            pfc = new PrivateFontCollection();
+            pfc.AddFontFile(@"UVF_SlimTony.ttf");
+            label7777.Font = new Font(pfc.Families[0], 23);
 
         }
         private void checktrungmalop(String p_malop, ref int p_kq)

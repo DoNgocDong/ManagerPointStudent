@@ -11,7 +11,7 @@ namespace BaiTapLon_CSharp.src
     public static class Globals
     {
         //ServerName
-        public static string databaseServerName = System.Environment.MachineName + "\\SQLEXPRESS";
+        public static string databaseServerName = System.Environment.MachineName + "\\MSSQLSERVER01";
 
         //quyền truy cập
         public static bool isAdmin = false;

@@ -38,9 +38,14 @@
             this.txtTenNganh = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtGVCN = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label7777 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.grvLop = new System.Windows.Forms.DataGridView();
+            this.maLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvChuNhiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btTimKiem = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
             this.btSua = new System.Windows.Forms.Button();
@@ -48,11 +53,6 @@
             this.btThoat = new System.Windows.Forms.Button();
             this.btXacNhan = new System.Windows.Forms.Button();
             this.btHuy = new System.Windows.Forms.Button();
-            this.maLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.khoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvChuNhiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grvLop)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,21 +141,21 @@
             this.txtGVCN.Size = new System.Drawing.Size(386, 22);
             this.txtGVCN.TabIndex = 10;
             // 
-            // label7
+            // label7777
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoEllipsis = true;
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.label7.Font = new System.Drawing.Font("UVF Slim Tony", 22.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.ForeColor = System.Drawing.Color.Coral;
-            this.label7.Location = new System.Drawing.Point(961, 13);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 267);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Quản \r\nLý \r\nLớp";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7777.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7777.AutoEllipsis = true;
+            this.label7777.AutoSize = true;
+            this.label7777.BackColor = System.Drawing.Color.Transparent;
+            this.label7777.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label7777.Font = new System.Drawing.Font("UVF Slim Tony", 22.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label7777.ForeColor = System.Drawing.Color.Coral;
+            this.label7777.Location = new System.Drawing.Point(961, 13);
+            this.label7777.Name = "label7777";
+            this.label7777.Size = new System.Drawing.Size(151, 267);
+            this.label7777.TabIndex = 12;
+            this.label7777.Text = "Quản \r\nLý \r\nLớp";
+            this.label7777.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtTimKiem
             // 
@@ -189,6 +189,41 @@
             this.grvLop.Size = new System.Drawing.Size(875, 391);
             this.grvLop.TabIndex = 15;
             this.grvLop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvLop_CellClick);
+            // 
+            // maLop
+            // 
+            this.maLop.DataPropertyName = "maLop";
+            this.maLop.HeaderText = "Mã Lớp";
+            this.maLop.MinimumWidth = 6;
+            this.maLop.Name = "maLop";
+            // 
+            // tenLop
+            // 
+            this.tenLop.DataPropertyName = "tenLop";
+            this.tenLop.HeaderText = "Tên Lớp";
+            this.tenLop.MinimumWidth = 6;
+            this.tenLop.Name = "tenLop";
+            // 
+            // tenNganh
+            // 
+            this.tenNganh.DataPropertyName = "tenNganh";
+            this.tenNganh.HeaderText = "Tên Ngành";
+            this.tenNganh.MinimumWidth = 6;
+            this.tenNganh.Name = "tenNganh";
+            // 
+            // khoa
+            // 
+            this.khoa.DataPropertyName = "khoa";
+            this.khoa.HeaderText = "Khoá";
+            this.khoa.MinimumWidth = 6;
+            this.khoa.Name = "khoa";
+            // 
+            // gvChuNhiem
+            // 
+            this.gvChuNhiem.DataPropertyName = "gvChuNhiem";
+            this.gvChuNhiem.HeaderText = "Giáo Viên Chủ Nhiệm";
+            this.gvChuNhiem.MinimumWidth = 6;
+            this.gvChuNhiem.Name = "gvChuNhiem";
             // 
             // btTimKiem
             // 
@@ -272,41 +307,6 @@
             this.btHuy.UseVisualStyleBackColor = true;
             this.btHuy.Click += new System.EventHandler(this.btHuy_Click);
             // 
-            // maLop
-            // 
-            this.maLop.DataPropertyName = "maLop";
-            this.maLop.HeaderText = "Mã Lớp";
-            this.maLop.MinimumWidth = 6;
-            this.maLop.Name = "maLop";
-            // 
-            // tenLop
-            // 
-            this.tenLop.DataPropertyName = "tenLop";
-            this.tenLop.HeaderText = "Tên Lớp";
-            this.tenLop.MinimumWidth = 6;
-            this.tenLop.Name = "tenLop";
-            // 
-            // tenNganh
-            // 
-            this.tenNganh.DataPropertyName = "tenNganh";
-            this.tenNganh.HeaderText = "Tên Ngành";
-            this.tenNganh.MinimumWidth = 6;
-            this.tenNganh.Name = "tenNganh";
-            // 
-            // khoa
-            // 
-            this.khoa.DataPropertyName = "khoa";
-            this.khoa.HeaderText = "Khoá";
-            this.khoa.MinimumWidth = 6;
-            this.khoa.Name = "khoa";
-            // 
-            // gvChuNhiem
-            // 
-            this.gvChuNhiem.DataPropertyName = "gvChuNhiem";
-            this.gvChuNhiem.HeaderText = "Giáo Viên Chủ Nhiệm";
-            this.gvChuNhiem.MinimumWidth = 6;
-            this.gvChuNhiem.Name = "gvChuNhiem";
-            // 
             // ManagerClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -321,7 +321,7 @@
             this.Controls.Add(this.btTimKiem);
             this.Controls.Add(this.grvLop);
             this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label7777);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtGVCN);
             this.Controls.Add(this.label5);
@@ -353,7 +353,7 @@
         private System.Windows.Forms.TextBox txtTenNganh;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtGVCN;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label7777;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.DataGridView grvLop;
         private System.Windows.Forms.Button btTimKiem;
