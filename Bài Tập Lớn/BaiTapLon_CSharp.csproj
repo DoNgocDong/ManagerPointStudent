@@ -158,6 +158,9 @@
     <Compile Include="src\Globals.cs" />
     <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="src\Forms\MainForm\ManagerClass.resx">
+      <DependentUpon>ManagerClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\MainForm\ManagerStudent.resx">
       <DependentUpon>ManagerStudent.cs</DependentUpon>
     </EmbeddedResource>
