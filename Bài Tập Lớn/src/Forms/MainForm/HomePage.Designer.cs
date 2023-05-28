@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.actionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,30 +43,37 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.displayMenuFormPanel = new System.Windows.Forms.Panel();
-            this.menuStrip1.SuspendLayout();
+            this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // mainMenu
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mainMenu.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.mainMenu.GripMargin = new System.Windows.Forms.Padding(2);
+            this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.actionToolStripMenuItem,
             this.managerToolStripMenuItem,
             this.systemToolStripMenuItem,
             this.helpToolStripMenuItem,
             this.exitToolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(872, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mainMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
+            this.mainMenu.Location = new System.Drawing.Point(0, 0);
+            this.mainMenu.Name = "mainMenu";
+            this.mainMenu.Size = new System.Drawing.Size(872, 23);
+            this.mainMenu.TabIndex = 3;
+            this.mainMenu.Text = "menuStrip1";
             // 
             // actionToolStripMenuItem
             // 
+            this.actionToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.actionToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.actionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewProfileToolStripMenuItem,
             this.viewScoreToolStripMenuItem});
+            this.actionToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.actionToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
             this.actionToolStripMenuItem.Name = "actionToolStripMenuItem";
-            this.actionToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.actionToolStripMenuItem.Size = new System.Drawing.Size(79, 19);
             this.actionToolStripMenuItem.Text = "Hành động";
             // 
             // viewProfileToolStripMenuItem
@@ -85,13 +92,17 @@
             // 
             // managerToolStripMenuItem
             // 
+            this.managerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.managerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.managerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manaStudentToolStripMenuItem,
             this.manaClassToolStripMenuItem,
             this.manaCourseToolStripMenuItem,
             this.manaScoreStripMenuItem});
+            this.managerToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.managerToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
             this.managerToolStripMenuItem.Name = "managerToolStripMenuItem";
-            this.managerToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.managerToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
             this.managerToolStripMenuItem.Text = "Quản lý";
             // 
             // manaStudentToolStripMenuItem
@@ -124,38 +135,50 @@
             // 
             // systemToolStripMenuItem
             // 
+            this.systemToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.systemToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.systemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.changePasswordToolStripMenuItem,
             this.logOutToolStripMenuItem});
+            this.systemToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.systemToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
             this.systemToolStripMenuItem.Name = "systemToolStripMenuItem";
-            this.systemToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.systemToolStripMenuItem.Size = new System.Drawing.Size(69, 19);
             this.systemToolStripMenuItem.Text = "Hệ thống";
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.changePasswordToolStripMenuItem.Text = "Đổi mật khẩu";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.logOutToolStripMenuItem.Text = "Đăng xuất";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
+            this.helpToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.helpToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.helpToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(62, 19);
             this.helpToolStripMenuItem.Text = "Trợ giúp";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem1
             // 
+            this.exitToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
+            this.exitToolStripMenuItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.exitToolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
+            this.exitToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.White;
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(49, 20);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(49, 19);
             this.exitToolStripMenuItem1.Text = "Thoát";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
@@ -163,9 +186,9 @@
             // 
             this.displayMenuFormPanel.BackColor = System.Drawing.Color.White;
             this.displayMenuFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.displayMenuFormPanel.Location = new System.Drawing.Point(0, 24);
+            this.displayMenuFormPanel.Location = new System.Drawing.Point(0, 23);
             this.displayMenuFormPanel.Name = "displayMenuFormPanel";
-            this.displayMenuFormPanel.Size = new System.Drawing.Size(872, 439);
+           /* this.displayMenuFormPanel.Size = new System.Drawing.Size(872, 440);*/
             this.displayMenuFormPanel.TabIndex = 4;
             // 
             // HomePage
@@ -176,7 +199,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(872, 463);
             this.Controls.Add(this.displayMenuFormPanel);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.mainMenu);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomePage";
@@ -185,16 +208,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
             this.Load += new System.EventHandler(this.HomePage_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.mainMenu.ResumeLayout(false);
+            this.mainMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem actionToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip mainMenu;
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewScoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem managerToolStripMenuItem;
@@ -205,8 +227,9 @@
         private System.Windows.Forms.ToolStripMenuItem systemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
         private System.Windows.Forms.Panel displayMenuFormPanel;
+        private System.Windows.Forms.ToolStripMenuItem actionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     }
 }
