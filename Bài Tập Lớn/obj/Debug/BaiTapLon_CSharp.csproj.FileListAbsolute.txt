@@ -39,3 +39,24 @@ C:\Users\tn937\Desktop\name\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTa
 C:\Users\tn937\Desktop\name\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.CoreCompileInputs.cache
 C:\Users\tn937\Desktop\name\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.exe
 C:\Users\tn937\Desktop\name\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.pdb
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.exe.config
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.exe
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.pdb
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.AssemblyReference.cache
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.SuggestedBindingRedirects.cache
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.ManagerClass.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.ManagerStudent.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.ViewForAdmin.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Welcome.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.ChangePassword.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.HelpForm.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.LoginForm.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.LoginMethod.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.HomePage.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.ManagerStudent.ActionDetail.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.FormRepair.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.Properties.Resources.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.GenerateResource.cache
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.CoreCompileInputs.cache
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.exe
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.pdb
