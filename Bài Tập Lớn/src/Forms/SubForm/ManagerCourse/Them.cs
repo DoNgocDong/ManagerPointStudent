@@ -55,7 +55,13 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
+            MessageBox.Show("Thêm thành công!");
             this.Close();
+        }
+
+        private void Them_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

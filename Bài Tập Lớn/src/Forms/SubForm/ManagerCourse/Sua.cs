@@ -46,6 +46,11 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
             private void btnsua_Click(object sender, EventArgs e)
         {
             string mm = txtmamon.Text.Trim();
+            if(mm=="")
+            {
+                MessageBox.Show("Chọn Môn cần sửa!");
+                return;
+            }    
 
             string mmmoi = txtmmmoi.Text.Trim();
             if (mmmoi == "")
@@ -78,6 +83,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
             cmd.Dispose();
             con.Close();
             MessageBox.Show("Sửa thành công!");
+            this.Close();
 
         }
 
