@@ -63,9 +63,29 @@ namespace BaiTapLon_CSharp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1145178 {
+            get {
+                object obj = ResourceManager.GetObject("1145178", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Backgrourd_xem_diem {
             get {
                 object obj = ResourceManager.GetObject("Backgrourd xem diem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bulb_gae85bd138_1920 {
+            get {
+                object obj = ResourceManager.GetObject("bulb-gae85bd138_1920", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,6 +233,16 @@ namespace BaiTapLon_CSharp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pexels_pixabay_35888 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-pixabay-35888", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap showEye {
             get {
                 object obj = ResourceManager.GetObject("showEye", resourceCulture);
@@ -226,6 +256,16 @@ namespace BaiTapLon_CSharp.Properties {
         internal static System.Drawing.Bitmap test {
             get {
                 object obj = ResourceManager.GetObject("test", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_1 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

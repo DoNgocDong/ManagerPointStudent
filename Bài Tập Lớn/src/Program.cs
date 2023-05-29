@@ -17,7 +17,7 @@ namespace BaiTapLon_CSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManagerStudent());
+            Application.Run(new LoginMethod());
         }
     }
 }
