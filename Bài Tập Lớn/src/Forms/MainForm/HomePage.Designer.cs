@@ -188,7 +188,7 @@
             this.displayMenuFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.displayMenuFormPanel.Location = new System.Drawing.Point(0, 23);
             this.displayMenuFormPanel.Name = "displayMenuFormPanel";
-           /* this.displayMenuFormPanel.Size = new System.Drawing.Size(872, 440);*/
+            this.displayMenuFormPanel.Size = new System.Drawing.Size(872, 440);
             this.displayMenuFormPanel.TabIndex = 4;
             // 
             // HomePage

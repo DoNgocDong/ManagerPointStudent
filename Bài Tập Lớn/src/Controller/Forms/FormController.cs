@@ -14,6 +14,8 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
     public class FormController
     {
         private static ConnectDB database = new ConnectDB();
+        private static Actions databaseQuery = new Actions();
+
         private string connectString = database.getConnectionString();
 
         public void hideAndShow(Form hiddenForm, Form displayForm)
@@ -49,22 +51,18 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
             childForm.Show();
         }
         
-        public void load_DataGridView(DataGridView dgv, string tableNameinDatabase)
+        public void load_DataGridViewforAll(DataGridView dgv, string tableName)
         {
-            using(SqlConnection connection = new SqlConnection(connectString))
-            {
-                connection.Open();
+            DataTable data = databaseQuery.findAll(tableName);
+            dgv.DataSource = data;
+            dgv.Refresh();
+        }
 
-                string query = $"select * from {tableNameinDatabase}";
-                using(SqlCommand command = new SqlCommand(query, connection))
-                {
-                    SqlDataAdapter adapter = new SqlDataAdapter(command);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    dgv.DataSource = dt;
-                    dgv.Refresh();
-                }
-            }
+        public void load_DataGridViewWithCondition(DataGridView dgv, string tableName, string fieldCondition, string keyword)
+        {
+            DataTable data = databaseQuery.find(tableName, fieldCondition, keyword);
+            dgv.DataSource = data;
+            dgv.Refresh();
         }
 
         public void load_ComboBox(ComboBox cbBox)
@@ -77,6 +75,16 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                 }
+            }
+        }
+
+        public void delete(string tableName, string fieldCondition, string keyword)
+        {
+            try{
+                databaseQuery.delete(tableName, fieldCondition, keyword);
+            }
+            catch(Exception ex){
+                DialogResult result = MessageBox.Show(ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

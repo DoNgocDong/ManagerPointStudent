@@ -47,6 +47,9 @@
             this.updateBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.resetBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.selectedStudentLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisplayStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,7 +129,7 @@
             this.gioiTinh.DataPropertyName = "gioiTinh";
             this.gioiTinh.HeaderText = "Giới tính";
             this.gioiTinh.Name = "gioiTinh";
-            this.gioiTinh.Width = 72;
+            this.gioiTinh.Width = 67;
             // 
             // diaChi
             // 
@@ -134,7 +137,7 @@
             this.diaChi.DataPropertyName = "diaChi";
             this.diaChi.HeaderText = "Địa chỉ";
             this.diaChi.Name = "diaChi";
-            this.diaChi.Width = 65;
+            this.diaChi.Width = 48;
             // 
             // sdt
             // 
@@ -255,12 +258,45 @@
             this.resetBtn.UseVisualStyleBackColor = false;
             this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(540, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "* Lọc theo mã sinh viên";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(124, 181);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 19);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Sĩnh viên đang chọn:";
+            // 
+            // selectedStudentLabel
+            // 
+            this.selectedStudentLabel.AutoSize = true;
+            this.selectedStudentLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectedStudentLabel.Location = new System.Drawing.Point(272, 181);
+            this.selectedStudentLabel.Name = "selectedStudentLabel";
+            this.selectedStudentLabel.Size = new System.Drawing.Size(50, 19);
+            this.selectedStudentLabel.TabIndex = 10;
+            this.selectedStudentLabel.Text = "Không";
+            // 
             // ManagerStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(854, 501);
+            this.Controls.Add(this.selectedStudentLabel);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.resetBtn);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.updateBtn);
@@ -299,5 +335,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
         private System.Windows.Forms.DataGridViewTextBoxColumn cccd;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label selectedStudentLabel;
     }
 }

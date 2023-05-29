@@ -10,6 +10,6 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerStudent
     {
         public static string tableName = "SinhVien";
         public static string primaryKeyName = "";
-        public static bool addAction = true;        
+        public static bool isAddStudentAction = true;        
     }
 }
