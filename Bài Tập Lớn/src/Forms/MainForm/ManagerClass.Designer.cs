@@ -58,7 +58,7 @@
             // 
             // txtMalop
             // 
-            this.txtMalop.Location = new System.Drawing.Point(142, 86);
+            this.txtMalop.Location = new System.Drawing.Point(144, 120);
             this.txtMalop.Name = "txtMalop";
             this.txtMalop.Size = new System.Drawing.Size(136, 22);
             this.txtMalop.TabIndex = 0;
@@ -67,7 +67,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(44, 86);
+            this.label1.Location = new System.Drawing.Point(46, 120);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 19);
             this.label1.TabIndex = 1;
@@ -77,7 +77,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(29, 163);
+            this.label3.Location = new System.Drawing.Point(31, 162);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 19);
             this.label3.TabIndex = 5;
@@ -85,7 +85,7 @@
             // 
             // txtKhoa
             // 
-            this.txtKhoa.Location = new System.Drawing.Point(142, 163);
+            this.txtKhoa.Location = new System.Drawing.Point(144, 162);
             this.txtKhoa.Name = "txtKhoa";
             this.txtKhoa.Size = new System.Drawing.Size(136, 22);
             this.txtKhoa.TabIndex = 4;

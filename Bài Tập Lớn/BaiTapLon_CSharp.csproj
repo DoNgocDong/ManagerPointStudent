@@ -277,12 +277,23 @@
   <ItemGroup>
     <None Include="Resources\hideEye.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\pexels-pixabay-35888.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Welcome.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\welcome2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1145178.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulb-gae85bd138_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
