@@ -30,8 +30,26 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
             if (con.State == ConnectionState.Closed)
                 con.Open();
             string mamonhoc = txtmamon.Text.Trim();
+            if (mamonhoc == "")
+            {
+                txtmamon.Focus();
+                MessageBox.Show("Phải nhập mã môn!");
+                return;
+            }
             string tenmonhoc = txttenmon.Text.Trim();
+            if (tenmonhoc == "")
+            {
+                txttenmon.Focus();
+                MessageBox.Show("Phải nhập tên môn!");
+                return;
+            }
             string sotinchi = txtsotinchi.Text.Trim();
+            if (sotinchi == "")
+            {
+                txtsotinchi.Focus();
+                MessageBox.Show("Phải nhập mã môn!");
+                return;
+            }
             string query = "insert MonHoc values('" + mamonhoc + "','" + tenmonhoc + "'," + sotinchi + ")";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();

@@ -179,6 +179,9 @@
     <EmbeddedResource Include="src\Forms\MainForm\ManagerClass.resx">
       <DependentUpon>ManagerClass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\MainForm\ManagerCourse.resx">
+      <DependentUpon>ManagerCourse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\MainForm\ManagerStudent.resx">
       <DependentUpon>ManagerStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\MainForm\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\SubForm\ManagerCourse\Sua.resx">
+      <DependentUpon>Sua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\SubForm\ManagerStudent\ActionDetail.resx">
       <DependentUpon>ActionDetail.cs</DependentUpon>

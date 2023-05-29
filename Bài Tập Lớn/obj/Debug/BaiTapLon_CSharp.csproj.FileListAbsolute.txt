@@ -81,3 +81,5 @@ E:\Học\2 C sharp\BaiTapLon\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiT
 E:\Học\2 C sharp\BaiTapLon\ManagerPointStudent\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.exe.config
 E:\Học\2 C sharp\BaiTapLon\ManagerPointStudent\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.exe
 E:\Học\2 C sharp\BaiTapLon\ManagerPointStudent\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.pdb
+E:\Học\2 C sharp\BaiTapLon\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.ManagerCourse.resources
+E:\Học\2 C sharp\BaiTapLon\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubFormMonHoc.Sua.resources
