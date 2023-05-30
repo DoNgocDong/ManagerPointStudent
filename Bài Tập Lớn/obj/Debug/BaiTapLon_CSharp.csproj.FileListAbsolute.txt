@@ -39,9 +39,7 @@ C:\Users\tn937\Desktop\name\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTa
 C:\Users\tn937\Desktop\name\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.CoreCompileInputs.cache
 C:\Users\tn937\Desktop\name\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.exe
 C:\Users\tn937\Desktop\name\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.pdb
-<<<<<<< HEAD
 C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.ManagerClass.resources
-=======
 C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.exe.config
 C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.exe
 C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.pdb
@@ -88,4 +86,7 @@ E:\Học\2 C sharp\BaiTapLon\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiT
 E:\Học\2 C sharp\BaiTapLon\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubFormMonHoc.Sua.resources
 E:\Học\2 C sharp\BaiTapLon\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubFormMonHoc.Them.resources
 E:\Học\2 C sharp\BaiTapLon\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.ManagerCourse.Xoa.resources
->>>>>>> 4510f2d3d39eb9087f083f1aca925e8d4cd4beea
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.ManagerCourse.resources
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubFormMonHoc.Sua.resources
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubFormMonHoc.Them.resources
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.ManagerCourse.Xoa.resources

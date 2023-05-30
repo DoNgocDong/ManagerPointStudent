@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using BaiTapLon_CSharp.src.Forms.SubFormMonHoc;
 using BaiTapLon_CSharp.src.Forms.SubForm.ManagerCourse;
+using BaiTapLon_CSharp.src.Database;
 
 namespace BaiTapLon_CSharp.src.Forms.MainForm
 {
     public partial class ManagerCourse : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-NJVE0UN\\SQLEXPRESS;Initial Catalog=QLDiemSinhVien;Integrated Security=True");
+        private static ConnectDB database = new ConnectDB();
+        private string stringConnetion = database.getConnectionString();
         public ManagerCourse()
         {
             InitializeComponent();
@@ -23,17 +25,21 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
 
         private void load_DGV()
         {
-            if (con.State == ConnectionState.Closed) { 
-                con.Open(); }
-            SqlCommand cmd = new SqlCommand("select * from MonHoc",con);
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = cmd;
-            DataTable tb = new DataTable();
-            da.Fill(tb);
-            cmd.Dispose();
-            con.Close();
-            DGV.DataSource = tb;
-            DGV.Refresh();
+            using(SqlConnection connection = new SqlConnection(stringConnetion))
+            {
+                connection.Open();
+
+                string query = "select * from MonHoc";
+                using(SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    DataTable tb = new DataTable();
+                    da.Fill(tb);
+                    DGV.DataSource = tb;
+                    DGV.Refresh();
+                }
+            }
         }
         private void ManagerCourse_Load(object sender, EventArgs e)
         {
@@ -66,26 +72,32 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
 
         private void btntimkiem_Click(object sender, EventArgs e)
         {
-            if (con.State == ConnectionState.Closed)
-            {
-                con.Open();
-            }
             string tk = txttimkiem.Text.Trim();
-            if(tk=="")
+            if (tk == "")
             {
                 txttimkiem.Focus();
                 MessageBox.Show("Nhận tên Môn cần tìm kiếm!");
                 return;
-            }    
-            SqlCommand cmd = new SqlCommand("select * from MonHoc where tenMon ='"+tk+"'",con);
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = cmd;
-            DataTable tb = new DataTable();
-            da.Fill(tb);
-            cmd.Dispose();
-            con.Close();
-            DGV.DataSource = tb;
-            DGV.Refresh();
+            }
+
+            using (SqlConnection connection = new SqlConnection(stringConnetion))
+            {
+                connection.Open();
+
+                string query = "select * from MonHoc where tenMon like '%" + tk + "%'";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    DataTable tb = new DataTable();
+                    da.Fill(tb);
+                    DGV.DataSource = tb;
+                    DGV.Refresh();
+                }
+            }
+
+    
+
         }
     }
 }

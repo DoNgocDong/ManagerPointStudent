@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaiTapLon_CSharp.src.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,8 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerCourse
 {
     public partial class Xoa : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-NJVE0UN\\SQLEXPRESS;Initial Catalog=QLDiemSinhVien;Integrated Security=True");
+        private static ConnectDB database = new ConnectDB();
+        private string stringConnetion = database.getConnectionString();
         public Xoa()
         {
             InitializeComponent();
@@ -21,19 +23,21 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerCourse
 
         private void load_DGV()
         {
-            if (con.State == ConnectionState.Closed)
+            using (SqlConnection connection = new SqlConnection(stringConnetion))
             {
-                con.Open();
+                connection.Open();
+
+                string query = "select * from MonHoc";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    DataTable tb = new DataTable();
+                    da.Fill(tb);
+                    DGV.DataSource = tb;
+                    DGV.Refresh();
+                }
             }
-            SqlCommand cmd = new SqlCommand("select * from MonHoc", con);
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = cmd;
-            DataTable tb = new DataTable();
-            da.Fill(tb);
-            cmd.Dispose();
-            con.Close();
-            DGV.DataSource = tb;
-            DGV.Refresh();
         }
         private void Xoa_Load(object sender, EventArgs e)
         {
@@ -56,22 +60,25 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerCourse
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (con.State == ConnectionState.Closed)
-            {
-                con.Open();
-            }
             string mm = txtmamon.Text.Trim();
             if (mm == "")
             {
                 MessageBox.Show("Chọn Môn cần xóa!");
                 return;
-            }    
-            SqlCommand cmd = new SqlCommand("delete from MonHoc where maMon='"+mm+"'", con);
-            cmd.ExecuteNonQuery();
-            cmd.Dispose();
-            con.Close();
-            MessageBox.Show("Xóa thành công!");
-            this.Close();
+            }
+
+            using (SqlConnection connection = new SqlConnection(stringConnetion))
+            {
+                connection.Open();
+
+                string query = "delete from MonHoc where maMon='" + mm + "'";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Xóa thành công!");
+                    this.Close();
+                }
+            }
         }
     }
 }

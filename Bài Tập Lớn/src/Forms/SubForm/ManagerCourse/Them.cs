@@ -1,4 +1,5 @@
-﻿using BaiTapLon_CSharp.src.Forms.MainForm;
+﻿using BaiTapLon_CSharp.src.Database;
+using BaiTapLon_CSharp.src.Forms.MainForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,8 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
 {
     public partial class Them : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-NJVE0UN\\SQLEXPRESS;Initial Catalog=QLDiemSinhVien;Integrated Security=True");
+        private static ConnectDB database = new ConnectDB();
+        private string stringConnetion = database.getConnectionString();
         public Them()
         {
             InitializeComponent();
@@ -27,8 +29,6 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
 
         private void btnluu_Click(object sender, EventArgs e)
         {
-            if (con.State == ConnectionState.Closed)
-                con.Open();
             string mamonhoc = txtmamon.Text.Trim();
             if (mamonhoc == "")
             {
@@ -50,13 +50,19 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
                 MessageBox.Show("Phải nhập mã môn!");
                 return;
             }
-            string query = "insert MonHoc values('" + mamonhoc + "','" + tenmonhoc + "'," + sotinchi + ")";
-            SqlCommand cmd = new SqlCommand(query, con);
-            cmd.ExecuteNonQuery();
-            cmd.Dispose();
-            con.Close();
-            MessageBox.Show("Thêm thành công!");
-            this.Close();
+
+            using (SqlConnection connection = new SqlConnection(stringConnetion))
+            {
+                connection.Open();
+
+                string query = "insert MonHoc values('" + mamonhoc + "','" + tenmonhoc + "'," + sotinchi + ")";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Thêm thành công!");
+                    this.Close();
+                }
+            }
         }
 
         private void Them_Load(object sender, EventArgs e)
