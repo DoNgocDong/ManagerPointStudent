@@ -20,7 +20,7 @@ namespace BaiTapLon_CSharp.src.Database
             {
                 connection.Open();
 
-                string query = $"delete from {tableToDelete} where {fieldCondition} = {keyword}";
+                string query = $"delete from {tableToDelete} where {fieldCondition} = '{keyword}'";
                 using(SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     int i = cmd.ExecuteNonQuery();
@@ -30,13 +30,13 @@ namespace BaiTapLon_CSharp.src.Database
             }
         }
 
-        public DataTable find(string tableToFind, string fieldCondition, string keyword)
+        public DataTable find(string tableToFind, string getValue, string fieldCondition, string keyword)
         {
             using (SqlConnection connection = new SqlConnection(stringConnection))
             {
                 connection.Open();
 
-                string query = $"select * from {tableToFind} where {fieldCondition} like '%{keyword}%'";
+                string query = $"select {getValue} from {tableToFind} where {fieldCondition} like '%{keyword}%'";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);

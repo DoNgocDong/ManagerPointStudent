@@ -2,9 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -60,20 +62,27 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
 
         public void load_DataGridViewWithCondition(DataGridView dgv, string tableName, string fieldCondition, string keyword)
         {
-            DataTable data = databaseQuery.find(tableName, fieldCondition, keyword);
+            DataTable data = databaseQuery.find(tableName, "*", fieldCondition, keyword);
             dgv.DataSource = data;
             dgv.Refresh();
         }
 
-        public void load_ComboBox(ComboBox cbBox)
+        public void load_ComboBox(ComboBox cbBox, string tableName, string displayMemberColumn, string ValueMemberColumn)
         {
             using (SqlConnection connection = new SqlConnection(connectString))
             {
                 connection.Open();
 
-                string query = "";
+                string query = $"select * from {tableName}";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable data = new DataTable();
+                    adapter.Fill(data);
+
+                    cbBox.DataSource = data;
+                    cbBox.DisplayMember = displayMemberColumn;
+                    cbBox.ValueMember = ValueMemberColumn;
                 }
             }
         }

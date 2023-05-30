@@ -233,6 +233,7 @@
             // 
             // nganhTextBox
             // 
+            this.nganhTextBox.Enabled = false;
             this.nganhTextBox.Location = new System.Drawing.Point(94, 255);
             this.nganhTextBox.Name = "nganhTextBox";
             this.nganhTextBox.Size = new System.Drawing.Size(398, 20);

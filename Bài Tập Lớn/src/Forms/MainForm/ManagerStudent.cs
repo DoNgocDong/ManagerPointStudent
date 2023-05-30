@@ -19,6 +19,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
         private FormController controller = new FormController();
         private Actions databaseQuery = new Actions();
         string tableName = ManagerStudent_EnviromentVariable.tableName;
+        string selectedMSV = ManagerStudent_EnviromentVariable.selectedMaSV;
 
         public ManagerStudent()
         {
@@ -56,7 +57,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
             string fieldCondition = "maSinhVien";
             string keyword = selectedStudentLabel.Text.Trim();
 
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn đổi mật khẩu?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             
             switch (result)
             {
@@ -66,11 +67,19 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
                 case DialogResult.No:
                     break;
             }
+            controller.load_DataGridViewforAll(dgvDisplayStudents, tableName);
         }
 
         private void resetBtn_Click(object sender, EventArgs e)
         {
             controller.load_DataGridViewforAll(dgvDisplayStudents, tableName);
+        }
+
+        private void dgvDisplayStudents_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            selectedStudentLabel.Text = dgvDisplayStudents.Rows[i].Cells[0].Value.ToString();
+            selectedMSV = selectedStudentLabel.Text;
         }
     }
 }

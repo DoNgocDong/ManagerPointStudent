@@ -20,7 +20,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerCourse
         {
             InitializeComponent();
         }
-
+        
         private void load_DGV()
         {
             using (SqlConnection connection = new SqlConnection(stringConnetion))

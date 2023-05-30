@@ -76,6 +76,7 @@
             this.dgvDisplayStudents.Name = "dgvDisplayStudents";
             this.dgvDisplayStudents.Size = new System.Drawing.Size(854, 285);
             this.dgvDisplayStudents.TabIndex = 0;
+            this.dgvDisplayStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDisplayStudents_CellClick);
             // 
             // maSinhVien
             // 
@@ -262,7 +263,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(540, 56);
+            this.label2.Location = new System.Drawing.Point(552, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 8;

@@ -56,14 +56,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.subManagerScoure
             String diemTK = txtdiemTK.Text.Trim();
             String diemchu = txtdiemchu.Text.Trim();
             String danhgia = txtdanhgia.Text.Trim();
-            int kp = 0;
-            checkmasv(masv, ref kp);
-            if (kp == 1)
-            {
-                txtmasv.Focus();
-                MessageBox.Show("Trùng mã sinh viên");
-                return;
-            }
+
             using (SqlConnection connection = new SqlConnection(con))
             {
                 connection.Open();
