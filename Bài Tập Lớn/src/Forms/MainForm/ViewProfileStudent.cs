@@ -14,8 +14,10 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
 {
     public partial class ViewProfileStudent : Form
     {
-        static ConnectDB Ctrl = new ConnectDB();
-        string con = Ctrl.getConnectionString();
+        private Actions databaseQuery = new Actions();
+        private string masv = Globals.currentAccount;
+        private string tableName = Globals.tableStudent;
+
         public ViewProfileStudent()
         {
             InitializeComponent();
@@ -23,23 +25,9 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
 
         private void ViewProfileStudent_Load(object sender, EventArgs e)
         {
-            string masv = Globals.currentAccount;
-            using (SqlConnection connection = new SqlConnection(con))
-            {
-                connection.Open();
-
-                string query = "SELECT * FROM Sinhvien where maSinhvien=@maSinhvien";
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.Add("@maSinhvien", SqlDbType.NVarChar, 20).Value = masv;
-                    SqlDataAdapter da = new SqlDataAdapter();
-                    da.SelectCommand = command;
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    dgv1.DataSource = dt;
-                    dgv1.Refresh();
-                }
-            }
+            DataTable data = databaseQuery.find(tableName, "*", "maSinhVien", masv);
+            dgv1.DataSource = data;
+            dgv1.Refresh();
         }
     }
 }

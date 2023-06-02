@@ -21,6 +21,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerStudent
 
         private string stringConnection = database.getConnectionString();
         private bool isAddStudentAction = ManagerStudent_EnviromentVariable.isAddStudentAction;
+        private string tableName = ManagerStudent_EnviromentVariable.tableName;
         public ActionDetail()
         {
             InitializeComponent();
@@ -121,14 +122,14 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerStudent
 
         private void displayToUpdate(string keyword)
         {
-            DataTable data = databaseQuery.find("SinhVien", "*", "maSinhVien", keyword);
+            DataTable data = databaseQuery.find(tableName, "*", "maSinhVien", keyword);
 
             maSinhVienTextBox.Text = data.Rows[0][0].ToString();
             hoTenTextBox.Text = data.Rows[0][1].ToString();
             lopComboBox.Text = data.Rows[0][2].ToString();
             khoaTextBox.Text = data.Rows[0][3].ToString();
             nganhTextBox.Text = data.Rows[0][4].ToString();
-
+            ngaySinhDateTimePicker.Value = Convert.ToDateTime(data.Rows[0][5]);
             gioiTinhComboBox.Text = data.Rows[0][6].ToString();
             diaChiTextBox.Text = data.Rows[0][7].ToString();
             sdtTextBox.Text = data.Rows[0][8].ToString();

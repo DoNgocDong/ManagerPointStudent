@@ -41,8 +41,10 @@
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.displayMenuFormPanel = new System.Windows.Forms.Panel();
+            this.toolsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scholarshipMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,8 +56,9 @@
             this.actionToolStripMenuItem,
             this.managerToolStripMenuItem,
             this.systemToolStripMenuItem,
+            this.toolsMenuItem,
             this.helpToolStripMenuItem,
-            this.exitToolStripMenuItem1});
+            this.exitToolStripMenuItem});
             this.mainMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
@@ -92,7 +95,7 @@
             // 
             // managerToolStripMenuItem
             // 
-            this.managerToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.managerToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.managerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.managerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manaStudentToolStripMenuItem,
@@ -135,7 +138,7 @@
             // 
             // systemToolStripMenuItem
             // 
-            this.systemToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.systemToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.systemToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.systemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.changePasswordToolStripMenuItem,
@@ -149,20 +152,20 @@
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.changePasswordToolStripMenuItem.Text = "Đổi mật khẩu";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logOutToolStripMenuItem.Text = "Đăng xuất";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.BackColor = System.Drawing.Color.Silver;
+            this.helpToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.helpToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.helpToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
@@ -171,16 +174,16 @@
             this.helpToolStripMenuItem.Text = "Trợ giúp";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
-            // exitToolStripMenuItem1
+            // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem1.BackColor = System.Drawing.Color.Silver;
-            this.exitToolStripMenuItem1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.exitToolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
-            this.exitToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.White;
-            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(49, 19);
-            this.exitToolStripMenuItem1.Text = "Thoát";
-            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
+            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.exitToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.exitToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(49, 19);
+            this.exitToolStripMenuItem.Text = "Thoát";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
             // displayMenuFormPanel
             // 
@@ -190,6 +193,21 @@
             this.displayMenuFormPanel.Name = "displayMenuFormPanel";
             this.displayMenuFormPanel.Size = new System.Drawing.Size(872, 440);
             this.displayMenuFormPanel.TabIndex = 4;
+            // 
+            // toolsMenuItem
+            // 
+            this.toolsMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.toolsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.scholarshipMenuItem});
+            this.toolsMenuItem.Name = "toolsMenuItem";
+            this.toolsMenuItem.Size = new System.Drawing.Size(64, 19);
+            this.toolsMenuItem.Text = "Công cụ";
+            // 
+            // scholarshipMenuItem
+            // 
+            this.scholarshipMenuItem.Name = "scholarshipMenuItem";
+            this.scholarshipMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.scholarshipMenuItem.Text = "Xét học bổng";
             // 
             // HomePage
             // 
@@ -227,9 +245,11 @@
         private System.Windows.Forms.ToolStripMenuItem systemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Panel displayMenuFormPanel;
         private System.Windows.Forms.ToolStripMenuItem actionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolsMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scholarshipMenuItem;
     }
 }
