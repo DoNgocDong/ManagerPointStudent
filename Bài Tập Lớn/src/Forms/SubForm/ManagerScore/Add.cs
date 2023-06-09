@@ -1,5 +1,6 @@
 ﻿using BaiTapLon_CSharp.src.Database;
 using BaiTapLon_CSharp.src.Forms.MainForm;
+using BaiTapLon_CSharp.src.Forms.MainForm.Manager;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

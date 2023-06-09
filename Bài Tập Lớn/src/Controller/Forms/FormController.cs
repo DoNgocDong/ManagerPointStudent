@@ -16,7 +16,7 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
     public class FormController
     {
         private static ConnectDB database = new ConnectDB();
-        private static Actions databaseQuery = new Actions();
+        private static Services databaseQuery = new Services();
 
         private string connectString = database.getConnectionString();
 
@@ -69,21 +69,22 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
 
         public void load_ComboBox(ComboBox cbBox, string tableName, string displayMemberColumn, string ValueMemberColumn)
         {
-            using (SqlConnection connection = new SqlConnection(connectString))
+            DataTable data = databaseQuery.findAll(tableName);
+            cbBox.DataSource = data;
+
+            cbBox.DisplayMember = displayMemberColumn;
+            cbBox.ValueMember = ValueMemberColumn;
+        }
+
+        public void create(string tableToCreate, Dictionary<string, object> columnValues)
+        {
+            try
             {
-                connection.Open();
-
-                string query = $"select * from {tableName}";
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    SqlDataAdapter adapter = new SqlDataAdapter(command);
-                    DataTable data = new DataTable();
-                    adapter.Fill(data);
-
-                    cbBox.DataSource = data;
-                    cbBox.DisplayMember = displayMemberColumn;
-                    cbBox.ValueMember = ValueMemberColumn;
-                }
+                databaseQuery.create(tableToCreate, columnValues);
+            }
+            catch (Exception ex)
+            {
+                DialogResult result = MessageBox.Show(ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -93,6 +94,18 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
                 databaseQuery.delete(tableName, fieldCondition, keyword);
             }
             catch(Exception ex){
+                DialogResult result = MessageBox.Show(ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void update(string tableNameToUpdate, Dictionary<string, object> columnValues, string condition)
+        {
+            try
+            {
+                databaseQuery.update(tableNameToUpdate, columnValues, condition);
+            }
+            catch (Exception ex)
+            {
                 DialogResult result = MessageBox.Show(ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

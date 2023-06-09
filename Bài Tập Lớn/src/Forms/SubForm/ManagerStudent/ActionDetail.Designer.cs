@@ -230,6 +230,7 @@
             this.lopComboBox.Name = "lopComboBox";
             this.lopComboBox.Size = new System.Drawing.Size(157, 21);
             this.lopComboBox.TabIndex = 19;
+            this.lopComboBox.TextChanged += new System.EventHandler(this.lopComboBox_TextChanged);
             // 
             // nganhTextBox
             // 

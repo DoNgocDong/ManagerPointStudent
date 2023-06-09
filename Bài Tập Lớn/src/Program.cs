@@ -1,8 +1,5 @@
-﻿using BaiTapLon_CSharp.src.Forms.MainForm;
+﻿using BaiTapLon_CSharp.src.Forms.MainForm.Manager;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BaiTapLon_CSharp
@@ -17,7 +14,7 @@ namespace BaiTapLon_CSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManagerStudent());
+            Application.Run(new ManagerCourse());
         }
     }
 }

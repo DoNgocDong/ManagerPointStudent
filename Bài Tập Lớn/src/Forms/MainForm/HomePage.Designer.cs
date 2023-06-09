@@ -40,11 +40,12 @@
             this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scholarshipMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.displayMenuFormPanel = new System.Windows.Forms.Panel();
-            this.toolsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scholarshipMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manaMajorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,14 +83,14 @@
             // viewProfileToolStripMenuItem
             // 
             this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.viewProfileToolStripMenuItem.Text = "Xem hồ sơ";
             this.viewProfileToolStripMenuItem.Click += new System.EventHandler(this.viewProfileToolStripMenuItem_Click);
             // 
             // viewScoreToolStripMenuItem
             // 
             this.viewScoreToolStripMenuItem.Name = "viewScoreToolStripMenuItem";
-            this.viewScoreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewScoreToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.viewScoreToolStripMenuItem.Text = "Xem điểm";
             this.viewScoreToolStripMenuItem.Click += new System.EventHandler(this.viewScoreToolStripMenuItem_Click);
             // 
@@ -98,8 +99,9 @@
             this.managerToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.managerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.managerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manaStudentToolStripMenuItem,
+            this.manaMajorsToolStripMenuItem,
             this.manaClassToolStripMenuItem,
+            this.manaStudentToolStripMenuItem,
             this.manaCourseToolStripMenuItem,
             this.manaScoreStripMenuItem});
             this.managerToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
@@ -163,6 +165,21 @@
             this.logOutToolStripMenuItem.Text = "Đăng xuất";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
+            // toolsMenuItem
+            // 
+            this.toolsMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.toolsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.scholarshipMenuItem});
+            this.toolsMenuItem.Name = "toolsMenuItem";
+            this.toolsMenuItem.Size = new System.Drawing.Size(64, 19);
+            this.toolsMenuItem.Text = "Công cụ";
+            // 
+            // scholarshipMenuItem
+            // 
+            this.scholarshipMenuItem.Name = "scholarshipMenuItem";
+            this.scholarshipMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.scholarshipMenuItem.Text = "Xét học bổng";
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
@@ -194,20 +211,12 @@
             this.displayMenuFormPanel.Size = new System.Drawing.Size(872, 440);
             this.displayMenuFormPanel.TabIndex = 4;
             // 
-            // toolsMenuItem
+            // manaMajorsToolStripMenuItem
             // 
-            this.toolsMenuItem.BackColor = System.Drawing.Color.Transparent;
-            this.toolsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.scholarshipMenuItem});
-            this.toolsMenuItem.Name = "toolsMenuItem";
-            this.toolsMenuItem.Size = new System.Drawing.Size(64, 19);
-            this.toolsMenuItem.Text = "Công cụ";
-            // 
-            // scholarshipMenuItem
-            // 
-            this.scholarshipMenuItem.Name = "scholarshipMenuItem";
-            this.scholarshipMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.scholarshipMenuItem.Text = "Xét học bổng";
+            this.manaMajorsToolStripMenuItem.Name = "manaMajorsToolStripMenuItem";
+            this.manaMajorsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manaMajorsToolStripMenuItem.Text = "Chuyên ngành";
+            this.manaMajorsToolStripMenuItem.Click += new System.EventHandler(this.manaMajorsToolStripMenuItem_Click);
             // 
             // HomePage
             // 
@@ -251,5 +260,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scholarshipMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manaMajorsToolStripMenuItem;
     }
 }

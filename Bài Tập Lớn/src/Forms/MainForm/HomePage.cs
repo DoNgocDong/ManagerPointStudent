@@ -1,13 +1,8 @@
 ﻿using BaiTapLon_CSharp.src.Controller.Forms;
+using BaiTapLon_CSharp.src.Forms.MainForm.Actions;
+using BaiTapLon_CSharp.src.Forms.MainForm.Manager;
 using BaiTapLon_CSharp.src.Forms.SubForm;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BaiTapLon_CSharp.src.Forms.MainForm
@@ -117,6 +112,11 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
                 ViewScoreStudent viewScoreStudent = new ViewScoreStudent();
                 formController.addForm(viewScoreStudent, displayMenuFormPanel);
             }
+        }
+
+        private void manaMajorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
