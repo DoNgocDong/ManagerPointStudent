@@ -161,17 +161,24 @@
     <Compile Include="src\Forms\SubForm\ManagerCourse\Xoa.Designer.cs">
       <DependentUpon>Xoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\Forms\SubForm\ManagerMajors\ManagerMajorsActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\SubForm\ManagerMajors\ManagerMajorsActions.Designer.cs">
+      <DependentUpon>ManagerMajorsActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\SubForm\ManagerMajors\ManagerMajors.varEnv.cs" />
     <Compile Include="src\Forms\SubForm\ManagerScore\Add.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="src\Forms\SubForm\ManagerScore\Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\Forms\SubForm\ManagerStudent\ActionDetail.cs">
+    <Compile Include="src\Forms\SubForm\ManagerStudent\ManagerStudentActions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\Forms\SubForm\ManagerStudent\ActionDetail.Designer.cs">
-      <DependentUpon>ActionDetail.cs</DependentUpon>
+    <Compile Include="src\Forms\SubForm\ManagerStudent\ManagerStudentActions.Designer.cs">
+      <DependentUpon>ManagerStudentActions.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Forms\SubForm\ManagerStudent\ManagerStudent.varEnv.cs" />
     <Compile Include="src\Forms\SubForm\Update.cs">
@@ -187,6 +194,7 @@
       <DependentUpon>LoginMethod.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Globals.cs" />
+    <Compile Include="src\Models\ModelMajors.cs" />
     <Compile Include="src\Models\ModelUserAccount.cs" />
     <Compile Include="src\Models\ModelClass.cs" />
     <Compile Include="src\Models\ModelCourse.cs" />
@@ -239,8 +247,11 @@
     <EmbeddedResource Include="src\Forms\SubForm\ManagerCourse\Xoa.resx">
       <DependentUpon>Xoa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\Forms\SubForm\ManagerStudent\ActionDetail.resx">
-      <DependentUpon>ActionDetail.cs</DependentUpon>
+    <EmbeddedResource Include="src\Forms\SubForm\ManagerMajors\ManagerMajorsActions.resx">
+      <DependentUpon>ManagerMajorsActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\SubForm\ManagerStudent\ManagerStudentActions.resx">
+      <DependentUpon>ManagerStudentActions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\SubForm\Update.resx">
       <DependentUpon>Update.cs</DependentUpon>
