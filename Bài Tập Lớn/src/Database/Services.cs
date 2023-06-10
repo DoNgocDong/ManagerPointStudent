@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BaiTapLon_CSharp.src.Database
 {
-    internal class Services
+    public class Services
     {
         private static ConnectDB database = new ConnectDB();
         private static string stringConnection = database.getConnectionString();
@@ -80,20 +78,20 @@ namespace BaiTapLon_CSharp.src.Database
                     try
                     {
                         i = command.ExecuteNonQuery();
+                        return i > 0;
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Thêm thất bại!!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
                     }
-                    
-                    return i > 0;
                 }
             }
         }
 
 
         //Cập nhật lại giá trị của 1 bản ghi trong bảng `tableNameToUpdate` với điều kiện là `condition`
-        public void update(string tableNameToUpdate, Dictionary<string, object> columnValues, string condition)
+        public bool update(string tableNameToUpdate, Dictionary<string, object> columnValues, string condition)
         {
             // Tạo câu truy vấn cập nhật dữ liệu
             string query = $"UPDATE {tableNameToUpdate} SET ";
@@ -123,11 +121,13 @@ namespace BaiTapLon_CSharp.src.Database
                     // Thực hiện truy vấn
                     try
                     {
-                        command.ExecuteNonQuery();
+                        int i = command.ExecuteNonQuery();
+                        return i > 0;
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Cập nhật thất bại!!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
                     }
                 }
             }
@@ -149,13 +149,13 @@ namespace BaiTapLon_CSharp.src.Database
                     try
                     {
                         i = cmd.ExecuteNonQuery();
+                        return i > 0;
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Xóa thất bại!!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
                     }
-
-                    return i > 0;
                 }
             }
         }

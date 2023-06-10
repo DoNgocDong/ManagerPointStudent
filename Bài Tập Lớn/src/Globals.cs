@@ -27,5 +27,6 @@ namespace BaiTapLon_CSharp.src
         public static string tableClass = "Lop";
         public static string tableScore = "Diem";
         public static string tableCourse = "MonHoc";
+        public static string tableMajors = "Nganh";
     }
 }

@@ -187,6 +187,7 @@
       <DependentUpon>LoginMethod.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Globals.cs" />
+    <Compile Include="src\Models\ModelUserAccount.cs" />
     <Compile Include="src\Models\ModelClass.cs" />
     <Compile Include="src\Models\ModelCourse.cs" />
     <Compile Include="src\Models\ModelScore.cs" />
@@ -201,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\MainForm\Manager\ManagerMajors.resx">
       <DependentUpon>ManagerMajors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\MainForm\Manager\ManagerScore.resx">
+      <DependentUpon>ManagerScore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\MainForm\Manager\ManagerStudent.resx">
       <DependentUpon>ManagerStudent.cs</DependentUpon>

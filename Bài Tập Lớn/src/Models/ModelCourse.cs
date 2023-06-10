@@ -3,15 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BaiTapLon_CSharp.src.Models
 {
-    public class ModelCourse
+    public static class ModelCourse
     {
-        public string maMon { get; set; }
-        public string tenMon { get; set; }
-        public int soTinChi { get; set; }
+        public const int maMon = 0;
+        public const int tenMon = 1;
+        public const int soTinChi = 2;
 
-        public ModelCourse() { }
+        public static string getFieldName(int index)
+        {
+            switch (index)
+            {
+                case maMon:
+                    return "maMon";
+                case tenMon:
+                    return "tenMon";
+                case soTinChi:
+                    return "soTinChi";
+                default:
+                    throw new ArgumentException("Invalid field index value!");
+            }
+        }
     }
 }

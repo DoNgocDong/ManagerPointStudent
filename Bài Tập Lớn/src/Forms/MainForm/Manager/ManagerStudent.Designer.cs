@@ -218,7 +218,7 @@
             // updateBtn
             // 
             this.updateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.updateBtn.BackColor = System.Drawing.Color.Aqua;
+            this.updateBtn.BackColor = System.Drawing.Color.AliceBlue;
             this.updateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updateBtn.Enabled = false;
             this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -234,7 +234,7 @@
             // deleteBtn
             // 
             this.deleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.deleteBtn.BackColor = System.Drawing.Color.Aqua;
+            this.deleteBtn.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteBtn.Enabled = false;
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -288,9 +288,9 @@
             this.selectedStudentLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectedStudentLabel.Location = new System.Drawing.Point(272, 181);
             this.selectedStudentLabel.Name = "selectedStudentLabel";
-            this.selectedStudentLabel.Size = new System.Drawing.Size(50, 19);
+            this.selectedStudentLabel.Size = new System.Drawing.Size(43, 19);
             this.selectedStudentLabel.TabIndex = 10;
-            this.selectedStudentLabel.Text = "Không";
+            this.selectedStudentLabel.Text = "None";
             // 
             // ManagerStudent
             // 

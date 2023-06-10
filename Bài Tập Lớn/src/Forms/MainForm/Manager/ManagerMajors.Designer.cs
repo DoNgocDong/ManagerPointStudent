@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.displayMajorsDgv = new System.Windows.Forms.DataGridView();
+            this.maNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.addBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
@@ -39,8 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.selectedMajorsLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.maNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.displayMajorsDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +58,23 @@
             this.displayMajorsDgv.Name = "displayMajorsDgv";
             this.displayMajorsDgv.Size = new System.Drawing.Size(800, 225);
             this.displayMajorsDgv.TabIndex = 0;
+            this.displayMajorsDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.displayMajorsDgv_CellClick);
+            // 
+            // maNganh
+            // 
+            this.maNganh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.maNganh.DataPropertyName = "maNganh";
+            this.maNganh.HeaderText = "Mã Ngành";
+            this.maNganh.Name = "maNganh";
+            this.maNganh.Width = 82;
+            // 
+            // tenNganh
+            // 
+            this.tenNganh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.tenNganh.DataPropertyName = "tenNganh";
+            this.tenNganh.HeaderText = "Tên Ngành";
+            this.tenNganh.Name = "tenNganh";
+            this.tenNganh.Width = 677;
             // 
             // label1
             // 
@@ -84,12 +101,14 @@
             this.addBtn.TabIndex = 6;
             this.addBtn.Text = "Thêm";
             this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // updateBtn
             // 
             this.updateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.updateBtn.BackColor = System.Drawing.Color.Aqua;
+            this.updateBtn.BackColor = System.Drawing.Color.AliceBlue;
             this.updateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.updateBtn.Enabled = false;
             this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.updateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateBtn.Location = new System.Drawing.Point(602, 183);
@@ -98,12 +117,14 @@
             this.updateBtn.TabIndex = 7;
             this.updateBtn.Text = "Sửa";
             this.updateBtn.UseVisualStyleBackColor = false;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // deleteBtn
             // 
             this.deleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.deleteBtn.BackColor = System.Drawing.Color.Aqua;
+            this.deleteBtn.BackColor = System.Drawing.Color.AliceBlue;
             this.deleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteBtn.Enabled = false;
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.Location = new System.Drawing.Point(694, 183);
@@ -112,6 +133,7 @@
             this.deleteBtn.TabIndex = 8;
             this.deleteBtn.Text = "Xóa";
             this.deleteBtn.UseVisualStyleBackColor = false;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // reloadBtn
             // 
@@ -125,6 +147,7 @@
             this.reloadBtn.TabIndex = 9;
             this.reloadBtn.Text = "Tải lại";
             this.reloadBtn.UseVisualStyleBackColor = false;
+            this.reloadBtn.Click += new System.EventHandler(this.reloadBtn_Click);
             // 
             // searchBtn
             // 
@@ -139,6 +162,7 @@
             this.searchBtn.TabIndex = 10;
             this.searchBtn.Text = "Tìm kiếm";
             this.searchBtn.UseVisualStyleBackColor = false;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // keywordTxt
             // 
@@ -166,9 +190,9 @@
             this.selectedMajorsLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectedMajorsLabel.Location = new System.Drawing.Point(282, 187);
             this.selectedMajorsLabel.Name = "selectedMajorsLabel";
-            this.selectedMajorsLabel.Size = new System.Drawing.Size(50, 19);
+            this.selectedMajorsLabel.Size = new System.Drawing.Size(43, 19);
             this.selectedMajorsLabel.TabIndex = 16;
-            this.selectedMajorsLabel.Text = "Không";
+            this.selectedMajorsLabel.Text = "None";
             // 
             // label3
             // 
@@ -179,22 +203,6 @@
             this.label3.Size = new System.Drawing.Size(118, 19);
             this.label3.TabIndex = 15;
             this.label3.Text = "Ngành đang chọn:";
-            // 
-            // maNganh
-            // 
-            this.maNganh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.maNganh.DataPropertyName = "maNganh";
-            this.maNganh.HeaderText = "Mã Ngành";
-            this.maNganh.Name = "maNganh";
-            this.maNganh.Width = 82;
-            // 
-            // tenNganh
-            // 
-            this.tenNganh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.tenNganh.DataPropertyName = "tenNganh";
-            this.tenNganh.HeaderText = "Tên Ngành";
-            this.tenNganh.Name = "tenNganh";
-            this.tenNganh.Width = 677;
             // 
             // ManagerMajors
             // 
