@@ -21,6 +21,8 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
         {
             InitializeComponent();
         }
+
+        private const bool V = true;
         private static ConnectDB database = new ConnectDB();
         private string connectString = database.getConnectionString();
         private void load_gvrlophoc()
@@ -50,13 +52,11 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             txtKhoa.Text = "";
             txtGVCN.Text = "";
             grvLop.Enabled = true;
-            btSua.Enabled = false;
-            btXoa.Enabled = false;
-            btHuy.Enabled = false;
-            btThem.Enabled = true;
-            btXacNhan.Enabled = false;
-            txtGVCN.Enabled = false; txtKhoa.Enabled = false; txtMalop.Enabled = false;
-            txtTenLop.Enabled = false; txtTenNganh.Enabled = false;
+            btSua.Enabled = true;
+            btXoa.Enabled = true;
+            btThem.Enabled = V;
+            txtGVCN.Enabled = true; txtKhoa.Enabled = true; txtMalop.Enabled = true;
+            txtTenLop.Enabled = true; txtTenNganh.Enabled = true;
             pfc = new PrivateFontCollection();
             pfc.AddFontFile("UVF_SlimTony.ttf");
             label7777.Font = new Font(pfc.Families[0], 23);
@@ -80,23 +80,6 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             }
         }
         private void btThem_Click(object sender, EventArgs e)
-        {
-            String tb = "Bạn có muốn thêm thông tin chứ ??";
-            DialogResult check = MessageBox.Show(tb, "Thông báo :D", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (check == DialogResult.Yes)
-            {
-                btXacNhan.Enabled = true; btHuy.Enabled = true; btThem.Enabled = false;
-                txtGVCN.Enabled = true; txtKhoa.Enabled = true; txtMalop.Enabled = true;
-                txtTenLop.Enabled = true; txtTenNganh.Enabled = true;
-                grvLop.Enabled = false;
-            }
-            else
-            {
-                //Khong lam j cả :D
-            }
-        }
-
-        private void btXacNhan_Click(object sender, EventArgs e)
         {
             using (SqlConnection connection = new SqlConnection(connectString))
             {
@@ -172,36 +155,17 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             }
         }
 
-        private void btHuy_Click(object sender, EventArgs e)
-        {
-            String tb = "Bạn Thật sự muốn huỷ ??";
-            DialogResult check = MessageBox.Show(tb, "Thông báo :D", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (check == DialogResult.Yes)
-            {
-                ManagerClass_Load(sender, e);
-            }
-            else
-            {
-                //Khong lam j cả :D
-            }
-        }
-
         private void grvLop_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = e.RowIndex;// lấy chỉ số dòng đc click chuột vào
             txtMalop.Text = grvLop.Rows[i].Cells[0].Value.ToString();
             txtTenLop.Text = grvLop.Rows[i].Cells[1].Value.ToString();
-            txtTenNganh.Text = grvLop.Rows[i].Cells[2].Value.ToString();
-            txtKhoa.Text = grvLop.Rows[i].Cells[3].Value.ToString();
-            txtGVCN.Text = grvLop.Rows[i].Cells[4].Value.ToString();
-            btSua.Enabled = true;
-            btXoa.Enabled = true;
-            btThoat.Enabled = true;
-            btThem.Enabled = false;
-            btXacNhan.Enabled = false;
-            btHuy.Enabled = false;
+            cbMaNganh.Text = grvLop.Rows[i].Cells[2].Value.ToString();
+            txtTenNganh.Text = grvLop.Rows[i].Cells[3].Value.ToString();
+            txtKhoa.Text = grvLop.Rows[i].Cells[4].Value.ToString();
+            txtGVCN.Text = grvLop.Rows[i].Cells[5].Value.ToString();
             txtKhoa.Enabled = true; txtMalop.Enabled = false; txtTenLop.Enabled = true;
-            txtGVCN.Enabled = true; txtTenNganh.Enabled = true;
+            txtGVCN.Enabled = true; txtTenNganh.Enabled = true;cbMaNganh.Enabled = true;
         }
 
         private void btThoat_Click(object sender, EventArgs e)
@@ -364,5 +328,6 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                 txtTimKiem.Text = "Nhâp Mã lớp cần tìm";
             }    
         }
+
     }
 }
