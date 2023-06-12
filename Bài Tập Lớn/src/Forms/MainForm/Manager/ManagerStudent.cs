@@ -40,6 +40,8 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             ManagerStudent_EnviromentVariable.isAddStudentAction = false;
             controller.showDialog(new ManagerStudentActions());
             controller.load_DataGridViewforAll(dgvDisplayStudents, tableName);
+
+            this.resetBtn_Click(sender, e);
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
@@ -58,7 +60,8 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                 case DialogResult.No:
                     break;
             }
-            controller.load_DataGridViewforAll(dgvDisplayStudents, tableName);
+            
+            this.resetBtn_Click(sender, e);
         }
 
         private void resetBtn_Click(object sender, EventArgs e)

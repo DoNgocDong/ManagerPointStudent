@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.maNganhTextBox = new System.Windows.Forms.TextBox();
+            this.tenNganhTextBox = new System.Windows.Forms.TextBox();
             this.actionBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -45,19 +45,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Mã Ngành";
             // 
-            // textBox1
+            // maNganhTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 20);
-            this.textBox1.TabIndex = 3;
+            this.maNganhTextBox.Location = new System.Drawing.Point(131, 66);
+            this.maNganhTextBox.Name = "maNganhTextBox";
+            this.maNganhTextBox.Size = new System.Drawing.Size(137, 20);
+            this.maNganhTextBox.TabIndex = 3;
             // 
-            // textBox2
+            // tenNganhTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(131, 128);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(137, 20);
-            this.textBox2.TabIndex = 4;
+            this.tenNganhTextBox.Location = new System.Drawing.Point(131, 128);
+            this.tenNganhTextBox.Name = "tenNganhTextBox";
+            this.tenNganhTextBox.Size = new System.Drawing.Size(137, 20);
+            this.tenNganhTextBox.TabIndex = 4;
             // 
             // actionBtn
             // 
@@ -74,6 +74,7 @@
             this.actionBtn.TabIndex = 23;
             this.actionBtn.Text = "Hành động";
             this.actionBtn.UseVisualStyleBackColor = false;
+            this.actionBtn.Click += new System.EventHandler(this.actionBtn_Click);
             // 
             // label2
             // 
@@ -85,7 +86,7 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "Tên Ngành";
             // 
-            // ActionsMajors
+            // ManagerMajorsActions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,12 +94,13 @@
             this.ClientSize = new System.Drawing.Size(314, 351);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.actionBtn);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tenNganhTextBox);
+            this.Controls.Add(this.maNganhTextBox);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
-            this.Name = "ActionsMajors";
+            this.Name = "ManagerMajorsActions";
             this.Text = "ActionsMajors";
+            this.Load += new System.EventHandler(this.ManagerMajorsActions_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,8 +108,8 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox maNganhTextBox;
+        private System.Windows.Forms.TextBox tenNganhTextBox;
         private System.Windows.Forms.Button actionBtn;
         private System.Windows.Forms.Label label2;
     }

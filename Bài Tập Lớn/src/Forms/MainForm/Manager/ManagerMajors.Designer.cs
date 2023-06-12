@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.displayMajorsDgv = new System.Windows.Forms.DataGridView();
-            this.maNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.addBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
@@ -41,6 +39,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.selectedMajorsLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.maNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.displayMajorsDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,22 +59,6 @@
             this.displayMajorsDgv.Size = new System.Drawing.Size(800, 225);
             this.displayMajorsDgv.TabIndex = 0;
             this.displayMajorsDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.displayMajorsDgv_CellClick);
-            // 
-            // maNganh
-            // 
-            this.maNganh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.maNganh.DataPropertyName = "maNganh";
-            this.maNganh.HeaderText = "Mã Ngành";
-            this.maNganh.Name = "maNganh";
-            this.maNganh.Width = 82;
-            // 
-            // tenNganh
-            // 
-            this.tenNganh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.tenNganh.DataPropertyName = "tenNganh";
-            this.tenNganh.HeaderText = "Tên Ngành";
-            this.tenNganh.Name = "tenNganh";
-            this.tenNganh.Width = 677;
             // 
             // label1
             // 
@@ -203,6 +187,21 @@
             this.label3.Size = new System.Drawing.Size(118, 19);
             this.label3.TabIndex = 15;
             this.label3.Text = "Ngành đang chọn:";
+            // 
+            // maNganh
+            // 
+            this.maNganh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.maNganh.DataPropertyName = "maNganh";
+            this.maNganh.HeaderText = "Mã Ngành";
+            this.maNganh.Name = "maNganh";
+            this.maNganh.Width = 82;
+            // 
+            // tenNganh
+            // 
+            this.tenNganh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenNganh.DataPropertyName = "tenNganh";
+            this.tenNganh.HeaderText = "Tên Ngành";
+            this.tenNganh.Name = "tenNganh";
             // 
             // ManagerMajors
             // 

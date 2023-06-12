@@ -33,8 +33,9 @@
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.managerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manaStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manaMajorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manaClassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manaStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manaCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manaScoreStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +46,6 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.displayMenuFormPanel = new System.Windows.Forms.Panel();
-            this.manaMajorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,31 +110,38 @@
             this.managerToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
             this.managerToolStripMenuItem.Text = "Quản lý";
             // 
-            // manaStudentToolStripMenuItem
+            // manaMajorsToolStripMenuItem
             // 
-            this.manaStudentToolStripMenuItem.Name = "manaStudentToolStripMenuItem";
-            this.manaStudentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.manaStudentToolStripMenuItem.Text = "Sinh viên";
-            this.manaStudentToolStripMenuItem.Click += new System.EventHandler(this.manaStudentToolStripMenuItem_Click);
+            this.manaMajorsToolStripMenuItem.Name = "manaMajorsToolStripMenuItem";
+            this.manaMajorsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.manaMajorsToolStripMenuItem.Text = "Chuyên ngành";
+            this.manaMajorsToolStripMenuItem.Click += new System.EventHandler(this.manaMajorsToolStripMenuItem_Click);
             // 
             // manaClassToolStripMenuItem
             // 
             this.manaClassToolStripMenuItem.Name = "manaClassToolStripMenuItem";
-            this.manaClassToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manaClassToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.manaClassToolStripMenuItem.Text = "Lớp học";
             this.manaClassToolStripMenuItem.Click += new System.EventHandler(this.manaClassToolStripMenuItem_Click);
+            // 
+            // manaStudentToolStripMenuItem
+            // 
+            this.manaStudentToolStripMenuItem.Name = "manaStudentToolStripMenuItem";
+            this.manaStudentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.manaStudentToolStripMenuItem.Text = "Sinh viên";
+            this.manaStudentToolStripMenuItem.Click += new System.EventHandler(this.manaStudentToolStripMenuItem_Click);
             // 
             // manaCourseToolStripMenuItem
             // 
             this.manaCourseToolStripMenuItem.Name = "manaCourseToolStripMenuItem";
-            this.manaCourseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manaCourseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.manaCourseToolStripMenuItem.Text = "Môn học";
             this.manaCourseToolStripMenuItem.Click += new System.EventHandler(this.manaCourseToolStripMenuItem_Click);
             // 
             // manaScoreStripMenuItem
             // 
             this.manaScoreStripMenuItem.Name = "manaScoreStripMenuItem";
-            this.manaScoreStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manaScoreStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.manaScoreStripMenuItem.Text = "Điểm";
             this.manaScoreStripMenuItem.Click += new System.EventHandler(this.manaScoreStripMenuItem_Click);
             // 
@@ -154,14 +161,14 @@
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.changePasswordToolStripMenuItem.Text = "Đổi mật khẩu";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.logOutToolStripMenuItem.Text = "Đăng xuất";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
@@ -177,7 +184,7 @@
             // scholarshipMenuItem
             // 
             this.scholarshipMenuItem.Name = "scholarshipMenuItem";
-            this.scholarshipMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.scholarshipMenuItem.Size = new System.Drawing.Size(145, 22);
             this.scholarshipMenuItem.Text = "Xét học bổng";
             // 
             // helpToolStripMenuItem
@@ -210,13 +217,6 @@
             this.displayMenuFormPanel.Name = "displayMenuFormPanel";
             this.displayMenuFormPanel.Size = new System.Drawing.Size(872, 440);
             this.displayMenuFormPanel.TabIndex = 4;
-            // 
-            // manaMajorsToolStripMenuItem
-            // 
-            this.manaMajorsToolStripMenuItem.Name = "manaMajorsToolStripMenuItem";
-            this.manaMajorsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.manaMajorsToolStripMenuItem.Text = "Chuyên ngành";
-            this.manaMajorsToolStripMenuItem.Click += new System.EventHandler(this.manaMajorsToolStripMenuItem_Click);
             // 
             // HomePage
             // 

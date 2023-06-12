@@ -116,7 +116,9 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
 
         private void manaMajorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ManagerMajors managerMajors = new ManagerMajors();
 
+            formController.addForm(managerMajors, displayMenuFormPanel);
         }
     }
 }

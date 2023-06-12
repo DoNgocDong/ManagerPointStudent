@@ -58,6 +58,8 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             ManagerMajors_EnviromentVariable.isAddMajorsAction = false;
             controller.showDialog(new ManagerMajorsActions());
             controller.load_DataGridViewforAll(displayMajorsDgv, tableName);
+
+            this.reloadBtn_Click(sender, e);
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
@@ -74,7 +76,8 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                 case DialogResult.No:
                     break;
             }
-            controller.load_DataGridViewforAll(displayMajorsDgv, tableName);
+
+            this.reloadBtn_Click(sender, e);
         }
 
         private void displayMajorsDgv_CellClick(object sender, DataGridViewCellEventArgs e)

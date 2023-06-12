@@ -13,6 +13,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerStudent
 
         private bool isAddStudentAction = ManagerStudent_EnviromentVariable.isAddStudentAction;
         private string tableName = ManagerStudent_EnviromentVariable.tableName;
+        private string primaryKey = ManagerStudent_EnviromentVariable.primaryKeyName;
 
         public ManagerStudentActions()
         {
@@ -27,9 +28,9 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerStudent
         private void actionBtn_Click(object sender, EventArgs e)
         {
             if (isAddStudentAction)
-                addStudent();
+                createStudent();
             else
-                update();
+                updateStudent();
 
             this.Close();
         }
@@ -47,7 +48,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerStudent
             }
         }
 
-        private void addStudent()
+        private void createStudent()
         {
             List<object> values = new List<object>();
             try
@@ -80,7 +81,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerStudent
                 this.createAccountStudent(maSinhVienTextBox.Text.Trim());
         }
 
-        private void update()
+        private void updateStudent()
         {
             List<object> values = new List<object>();
 
@@ -100,7 +101,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerStudent
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Bạn phải nhập đầy đủ à chính xác thông tin!!!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Bạn phải nhập đầy đủ và chính xác thông tin!!!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             Dictionary<string, object> columnValues = new Dictionary<string, object>();
@@ -116,7 +117,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerStudent
 
         private void displayToUpdate(string keyword)
         {
-            DataTable data = formController.find(tableName, "*", "maSinhVien", keyword);
+            DataTable data = formController.find(tableName, "*", primaryKey, keyword);
 
             if(data != null && data.Rows.Count > 0)
             {
