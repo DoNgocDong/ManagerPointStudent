@@ -1,4 +1,6 @@
 ﻿using BaiTapLon_CSharp.src.Forms.MainForm.Manager;
+using BaiTapLon_CSharp.src.Forms.MainForm.Tools;
+using BaiTapLon_CSharp.src.Forms.SubForm.subManagerScoure;
 using System;
 using System.Windows.Forms;
 
@@ -14,7 +16,7 @@ namespace BaiTapLon_CSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManagerCourse());
+            Application.Run(new Exambanlist());
         }
     }
 }

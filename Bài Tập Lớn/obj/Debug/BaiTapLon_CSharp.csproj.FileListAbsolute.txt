@@ -42,9 +42,6 @@ C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPoi
 C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.pdb
 C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.AssemblyReference.cache
 C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.SuggestedBindingRedirects.cache
-C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.ManagerClass.resources
-C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.ManagerStudent.resources
-C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.ViewForAdmin.resources
 C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Welcome.resources
 C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.ChangePassword.resources
 C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.HelpForm.resources
@@ -91,3 +88,13 @@ C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài
 C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Manager.ManagerStudent.resources
 C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Actions.ViewForAdmin.resources
 C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Manager.ManagerMajors.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Manager.ManagerClass.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Manager.ManagerCourse.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Manager.ManagerMajors.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Manager.ManagerStudent.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Actions.ViewForAdmin.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubFormMonHoc.Sua.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubFormMonHoc.Them.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.ManagerCourse.Xoa.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.subManagerScoure.Add.resources
+C:\Users\tuann\OneDrive\Tài liệu\Baitap\c-sharp\btl- tuan_change\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Tools.Exambanlist.resources
