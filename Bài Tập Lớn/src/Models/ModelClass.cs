@@ -6,14 +6,31 @@ using System.Threading.Tasks;
 
 namespace BaiTapLon_CSharp.src.Models
 {
-    public class ModelClass
+    public static class ModelClass
     {
-        public string maLop { get; set; }
-        public string tenLop { get; set; }
-        public string tenNganh { get; set; }
-        public int khoa { get; set; }
-        public string gvChuNhiem { get; set; }
+        public const int maLop = 0;
+        public const int tenLop = 1;
+        public const int tenNganh = 2;
+        public const int khoa = 3;
+        public const int gvChuNhiem = 4;
 
-        public ModelClass() { }
+        public static string getFieldName(int index)
+        {
+            switch (index)
+            {
+                case maLop:
+                    return "maLop";
+                case tenLop:
+                    return "tenLop";
+                case tenNganh:
+                    return "tenNganh";
+                case khoa:
+                    return "khoa";
+                case gvChuNhiem:
+                    return "gvChuNhiem";
+                default:
+                    throw new ArgumentException("Invalid field index value!");
+            }
+        }
     }
 }

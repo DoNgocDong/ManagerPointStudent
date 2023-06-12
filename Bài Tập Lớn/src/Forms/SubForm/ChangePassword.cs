@@ -46,6 +46,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm
         {
             string oldPassword = oldPasswordTxt.Text.Trim();
             string newUserPassword = newPasswordTxt.Text.Trim();
+            string confirmPassword = confirmPasswordTxt.Text.Trim();
 
             DialogResult result = MessageBox.Show("Bạn có chắc muốn đổi mật khẩu?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (newUserPassword == "")
@@ -60,12 +61,17 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm
                     switch (result)
                     {
                         case DialogResult.Yes:
-                            bool check = loginController.changePassword(userName, oldPassword, newUserPassword, tableUserAccount);
+                            if (confirmPassword == newUserPassword)
+                            {
+                                bool check = loginController.changePassword(userName, oldPassword, newUserPassword, tableUserAccount);
 
-                            if (check)
-                                MessageBox.Show("Đổi mật khẩu thành công", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                if (check)
+                                    MessageBox.Show("Đổi mật khẩu thành công!", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                else
+                                    MessageBox.Show("Đổi mật khẩu thất bại!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                             else
-                                MessageBox.Show("Đổi mật khẩu thất bại", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Xác nhận mật khẩu không thành công!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             break;
 
                         case DialogResult.No:

@@ -2,23 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Data.SqlTypes;
-using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BaiTapLon_CSharp.src.Controller.Forms
 {
     public class FormController
     {
-        private static ConnectDB database = new ConnectDB();
         private static Services databaseQuery = new Services();
-
-        private string connectString = database.getConnectionString();
 
         public void hideAndShow(Form hiddenForm, Form displayForm)
         {
@@ -55,59 +45,50 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
         
         public void load_DataGridViewforAll(DataGridView dgv, string tableName)
         {
-            DataTable data = databaseQuery.findAll(tableName);
+            DataTable data = this.findAll(tableName);
             dgv.DataSource = data;
             dgv.Refresh();
         }
 
         public void load_DataGridViewWithCondition(DataGridView dgv, string tableName, string fieldCondition, string keyword)
         {
-            DataTable data = databaseQuery.find(tableName, "*", fieldCondition, keyword);
+            DataTable data = this.find(tableName, "*", fieldCondition, keyword);
             dgv.DataSource = data;
             dgv.Refresh();
         }
 
         public void load_ComboBox(ComboBox cbBox, string tableName, string displayMemberColumn, string ValueMemberColumn)
         {
-            DataTable data = databaseQuery.findAll(tableName);
+            DataTable data = this.findAll(tableName);
             cbBox.DataSource = data;
 
             cbBox.DisplayMember = displayMemberColumn;
             cbBox.ValueMember = ValueMemberColumn;
         }
 
-        public void create(string tableToCreate, Dictionary<string, object> columnValues)
+        public DataTable find(string tableToFind, string getValue, string fieldCondition, string keyword)
         {
-            try
-            {
-                databaseQuery.create(tableToCreate, columnValues);
-            }
-            catch (Exception ex)
-            {
-                DialogResult result = MessageBox.Show(ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            return databaseQuery.find(tableToFind, getValue, fieldCondition, keyword);
         }
 
-        public void delete(string tableName, string fieldCondition, string keyword)
+        public DataTable findAll(string tableToFind)
         {
-            try{
-                databaseQuery.delete(tableName, fieldCondition, keyword);
-            }
-            catch(Exception ex){
-                DialogResult result = MessageBox.Show(ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            return databaseQuery.findAll(tableToFind);
         }
 
-        public void update(string tableNameToUpdate, Dictionary<string, object> columnValues, string condition)
+        public bool create(string tableToCreate, Dictionary<string, object> columnValues)
         {
-            try
-            {
-                databaseQuery.update(tableNameToUpdate, columnValues, condition);
-            }
-            catch (Exception ex)
-            {
-                DialogResult result = MessageBox.Show(ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            return databaseQuery.create(tableToCreate, columnValues);
+        }
+
+        public bool update(string tableNameToUpdate, Dictionary<string, object> columnValues, string condition)
+        {
+            return databaseQuery.update(tableNameToUpdate, columnValues, condition);
+        }
+
+        public bool delete(string tableName, string fieldCondition, string keyword)
+        {
+            return databaseQuery.delete(tableName, fieldCondition, keyword);
         }
     }
 }

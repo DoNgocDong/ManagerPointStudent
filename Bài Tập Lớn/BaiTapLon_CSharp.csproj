@@ -113,13 +113,6 @@
     <Compile Include="src\Forms\MainForm\Actions\ViewScoreStudent.Designer.cs">
       <DependentUpon>ViewScoreStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\Forms\MainForm\Tools\Exambanlist.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\Forms\MainForm\Tools\.Designer.cs">
-      <DependentUpon>Exambanlist.cs</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="src\Forms\MainForm\Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,17 +161,18 @@
     <Compile Include="src\Forms\SubForm\ManagerCourse\Xoa.Designer.cs">
       <DependentUpon>Xoa.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\Forms\SubForm\ManagerScore\Add.cs">
+    <Compile Include="src\Forms\SubForm\ManagerMajors\ManagerMajorsActions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\Forms\SubForm\ManagerScore\Add.Designer.cs">
-      <DependentUpon>Add.cs</DependentUpon>
+    <Compile Include="src\Forms\SubForm\ManagerMajors\ManagerMajorsActions.Designer.cs">
+      <DependentUpon>ManagerMajorsActions.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\Forms\SubForm\ManagerStudent\ActionDetail.cs">
+    <Compile Include="src\Forms\SubForm\ManagerMajors\ManagerMajors.varEnv.cs" />
+    <Compile Include="src\Forms\SubForm\ManagerStudent\ManagerStudentActions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\Forms\SubForm\ManagerStudent\ActionDetail.Designer.cs">
-      <DependentUpon>ActionDetail.cs</DependentUpon>
+    <Compile Include="src\Forms\SubForm\ManagerStudent\ManagerStudentActions.Designer.cs">
+      <DependentUpon>ManagerStudentActions.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Forms\SubForm\ManagerStudent\ManagerStudent.varEnv.cs" />
     <Compile Include="src\Forms\SubForm\Update.cs">
@@ -194,6 +188,8 @@
       <DependentUpon>LoginMethod.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Globals.cs" />
+    <Compile Include="src\Models\ModelMajors.cs" />
+    <Compile Include="src\Models\ModelUserAccount.cs" />
     <Compile Include="src\Models\ModelClass.cs" />
     <Compile Include="src\Models\ModelCourse.cs" />
     <Compile Include="src\Models\ModelScore.cs" />
@@ -209,14 +205,14 @@
     <EmbeddedResource Include="src\Forms\MainForm\Manager\ManagerMajors.resx">
       <DependentUpon>ManagerMajors.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\MainForm\Manager\ManagerScore.resx">
+      <DependentUpon>ManagerScore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\MainForm\Manager\ManagerStudent.resx">
       <DependentUpon>ManagerStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\MainForm\Actions\ViewForAdmin.resx">
       <DependentUpon>ViewForAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\Forms\MainForm\Tools\Exambanlist.resx">
-      <DependentUpon>Exambanlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\MainForm\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
@@ -245,11 +241,11 @@
     <EmbeddedResource Include="src\Forms\SubForm\ManagerCourse\Xoa.resx">
       <DependentUpon>Xoa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\Forms\SubForm\ManagerScore\Add.resx">
-      <DependentUpon>Add.cs</DependentUpon>
+    <EmbeddedResource Include="src\Forms\SubForm\ManagerMajors\ManagerMajorsActions.resx">
+      <DependentUpon>ManagerMajorsActions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\Forms\SubForm\ManagerStudent\ActionDetail.resx">
-      <DependentUpon>ActionDetail.cs</DependentUpon>
+    <EmbeddedResource Include="src\Forms\SubForm\ManagerStudent\ManagerStudentActions.resx">
+      <DependentUpon>ManagerStudentActions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\SubForm\Update.resx">
       <DependentUpon>Update.cs</DependentUpon>
@@ -358,6 +354,8 @@
   <ItemGroup>
     <None Include="Resources\Untitled-1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="src\Forms\MainForm\Tools\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
