@@ -214,6 +214,7 @@
             // 
             // gioiTinhComboBox
             // 
+            this.gioiTinhComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.gioiTinhComboBox.FormattingEnabled = true;
             this.gioiTinhComboBox.Items.AddRange(new object[] {
             "Nam",
@@ -225,6 +226,7 @@
             // 
             // lopComboBox
             // 
+            this.lopComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lopComboBox.FormattingEnabled = true;
             this.lopComboBox.Location = new System.Drawing.Point(94, 64);
             this.lopComboBox.Name = "lopComboBox";

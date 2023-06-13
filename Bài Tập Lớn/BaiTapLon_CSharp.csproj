@@ -189,6 +189,7 @@
     </Compile>
     <Compile Include="src\Globals.cs" />
     <Compile Include="src\Models\ModelMajors.cs" />
+    <Compile Include="src\Models\ModelReviews.cs" />
     <Compile Include="src\Models\ModelUserAccount.cs" />
     <Compile Include="src\Models\ModelClass.cs" />
     <Compile Include="src\Models\ModelCourse.cs" />
