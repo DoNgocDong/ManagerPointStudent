@@ -258,15 +258,17 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 19);
             this.label2.TabIndex = 22;
-            this.label2.Text = "Mã Ngàng:";
+            this.label2.Text = "Mã Ngành:";
             // 
             // cbMaNganh
             // 
+            this.cbMaNganh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMaNganh.FormattingEnabled = true;
             this.cbMaNganh.Location = new System.Drawing.Point(140, 87);
             this.cbMaNganh.Name = "cbMaNganh";
             this.cbMaNganh.Size = new System.Drawing.Size(136, 24);
             this.cbMaNganh.TabIndex = 23;
+            this.cbMaNganh.TextChanged += new System.EventHandler(this.cbMaNganh_TextChanged);
             // 
             // maLop
             // 

@@ -16,7 +16,7 @@ namespace BaiTapLon_CSharp.src.Database
         //Select 1 hoặc nhiều bản ghi với điều kiện fieldCondition like %keyword%
         public DataTable find(string tableToFind, string getValue, string fieldCondition, string keyword)
         {
-            string query = $"select {getValue} from {tableToFind} where {fieldCondition} like '%{keyword}%'";
+            string query = $"select {getValue} from {tableToFind} where {fieldCondition} like '{keyword}'";
 
             using (SqlConnection connection = new SqlConnection(stringConnection))
             {
