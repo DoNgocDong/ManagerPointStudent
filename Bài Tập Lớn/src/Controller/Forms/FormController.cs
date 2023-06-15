@@ -73,6 +73,15 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
             cbBox.ValueMember = ValueMemberColumn;
         }
 
+        public void load_ComboBox(ComboBox cbBox, string tableName, string displayMemberColumn, string ValueMemberColumn, List<string> condition)
+        {
+            DataTable data = this.find(tableName, "*", condition);
+            cbBox.DataSource = data;
+
+            cbBox.DisplayMember = displayMemberColumn;
+            cbBox.ValueMember = ValueMemberColumn;
+        }
+
         public DataTable find(string tableToFind, string getValue, List<string> condition)
         {
             return databaseQuery.find(tableToFind, getValue, condition);
@@ -106,6 +115,11 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
         public bool delete(string tableName, string fieldCondition, string keyword)
         {
             return databaseQuery.delete(tableName, fieldCondition, keyword);
+        }
+
+        public bool checkExistValueInDatabase(string keyword, string compareFieldName, string compareTableName)
+        {
+            return databaseQuery.checkExistValueInDatabase(keyword, compareFieldName, compareTableName);
         }
     }
 }

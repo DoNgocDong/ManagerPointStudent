@@ -17,7 +17,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm
     public partial class ChangePassword : Form
     {
         private Login loginController = new Login();
-        private ConnectDB dbController = new ConnectDB();
+        private FormController formController = new FormController();
 
         string tableUserAccount = Globals.currentTableUserAccount;
         string userName = Globals.currentAccount;
@@ -91,7 +91,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm
             string newUserPassword = newPasswordTxt.Text.Trim();
             string confirmPassword = confirmPasswordTxt.Text.Trim();
 
-            bool checkOldPass = dbController.checkExistValueInDatabase(oldPassword, "userPassword", tableUserAccount);
+            bool checkOldPass = formController.checkExistValueInDatabase(oldPassword, "userPassword", tableUserAccount);
             bool checkConfirmPass = confirmPassword == newUserPassword;
 
             if(newUserPassword == "")

@@ -17,23 +17,5 @@ namespace BaiTapLon_CSharp.src.Database
         {
             return this.stringConnection;
         }
-
-        public bool checkExistValueInDatabase(string keyword, string compareFieldName, string compareTableName)
-        {
-            using (SqlConnection connection = new SqlConnection(stringConnection))
-            {
-                connection.Open();
-
-                string query = $"SELECT COUNT(*) FROM {compareTableName} WHERE {compareFieldName} = @keyword";
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@keyword", keyword);
-
-                    int count = (int)command.ExecuteScalar();
-
-                    return count > 0;
-                }
-            }
-        }
     }
 }

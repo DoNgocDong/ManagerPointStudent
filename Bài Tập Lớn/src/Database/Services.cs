@@ -33,6 +33,7 @@ namespace BaiTapLon_CSharp.src.Database
             }
         }
 
+        //Select 1 hoặc nhiều bản ghi với nhiều điều kiện
         public DataTable find(string tableToFind, string getValue, List<string> condition)
         {
             string query = $"select {getValue} from {tableToFind} where {string.Join(" and ", condition)}";
@@ -52,6 +53,7 @@ namespace BaiTapLon_CSharp.src.Database
             }
         }
 
+        //Select 1 hoặc nhiều bản ghi với điều kiện fieldCondition like %keyword%
         public DataTable find(string tableToFind, List<string> getValue, string fieldCondition, string keyword)
         {
             string query = $"select {string.Join(", ", getValue)} from {tableToFind} where {fieldCondition} like '%{keyword}%'";
@@ -194,6 +196,24 @@ namespace BaiTapLon_CSharp.src.Database
                         MessageBox.Show($"---Xóa thất bại!!---\n{ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
+                }
+            }
+        }
+
+        public bool checkExistValueInDatabase(string keyword, string compareFieldName, string compareTableName)
+        {
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+
+                string query = $"SELECT COUNT(*) FROM {compareTableName} WHERE {compareFieldName} = @keyword";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@keyword", keyword);
+
+                    int count = (int)command.ExecuteScalar();
+
+                    return count > 0;
                 }
             }
         }
