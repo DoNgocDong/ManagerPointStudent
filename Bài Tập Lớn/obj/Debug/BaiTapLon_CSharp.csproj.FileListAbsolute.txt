@@ -128,6 +128,7 @@ C:\Users\tn937\Source\Repos\DoNgocDong\ManagerPointStudent\Bài Tập Lớn\obj\
 C:\Users\tn937\Source\Repos\DoNgocDong\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.CoreCompileInputs.cache
 C:\Users\tn937\Source\Repos\DoNgocDong\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.exe
 C:\Users\tn937\Source\Repos\DoNgocDong\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.pdb
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Tools.SchoolarShipList.resources
 E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.exe.config
 E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.exe
 E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.pdb
@@ -139,6 +140,7 @@ E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.For
 E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Manager.ManagerScore.resources
 E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Manager.ManagerStudent.resources
 E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Actions.ViewForAdmin.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Tools.SchoolarShipList.resources
 E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Welcome.resources
 E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.ChangePassword.resources
 E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.HelpForm.resources

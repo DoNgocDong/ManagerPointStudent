@@ -76,7 +76,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
                 MessageBox.Show("Phải nhập số tín chỉ!");
                 return;
             }
-            string hocki = cbhocki.SelectedItem.ToString();
+            string hocki = cbhocki.Text.ToString();
 
             using (SqlConnection connection = new SqlConnection(stringConnetion))
             {
@@ -99,6 +99,11 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
             txttenmon.Text = DGV.Rows[i].Cells[1].Value.ToString();
             txtsotinchi.Text = DGV.Rows[i].Cells[2].Value.ToString();
             txthocki.Text = DGV.Rows[i].Cells[3].Value.ToString();
+            
+            txtmmmoi.Text = txtmamon.Text;
+            txttmmoi.Text = txttenmon.Text;
+            txtstcmoi.Text = txtsotinchi.Text;
+            cbhocki.Text = txthocki.Text;
         }
     }
 }

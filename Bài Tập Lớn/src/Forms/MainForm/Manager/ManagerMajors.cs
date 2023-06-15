@@ -87,7 +87,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                 int i = e.RowIndex;
                 selectedMajorsLabel.Text = displayMajorsDgv.Rows[i].Cells[0].Value.ToString();
 
-                ManagerStudent_EnviromentVariable.selectedMaSV = selectedMajorsLabel.Text;
+                ManagerMajors_EnviromentVariable.selectedMaNganh = selectedMajorsLabel.Text;
 
                 updateBtn.Enabled = true;
                 updateBtn.BackColor = Color.Aqua;

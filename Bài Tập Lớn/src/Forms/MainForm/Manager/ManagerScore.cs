@@ -1,19 +1,13 @@
 ﻿using BaiTapLon_CSharp.src.Controller.Forms;
+using BaiTapLon_CSharp.src.Controller.ProfessionHandling;
 using BaiTapLon_CSharp.src.Database;
-using BaiTapLon_CSharp.src.Forms.MainForm;
-using BaiTapLon_CSharp.src.Forms.MainForm.Manager;
+using BaiTapLon_CSharp.src.Forms.SubForm.ManagerScore;
+using BaiTapLon_CSharp.src.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager 
 {
@@ -23,12 +17,13 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
         static ConnectDB Ctrl = new ConnectDB();
         string con = Ctrl.getConnectionString();
         private FormController fctl = new FormController();
+        private FinalScore professionHandling = new FinalScore();
 
         public ManagerScore()
         {
             InitializeComponent();
         }
-        private void Add_Load(object sender, EventArgs e)
+        private void ManagerScore_Load(object sender, EventArgs e)
         {
             load_dgv2();
             fctl.load_ComboBox(txttenmon, "MonHoc", "tenMon", "maMon");
@@ -52,24 +47,36 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                 }
             }
         }
+
         private void bluu_Click(object sender, EventArgs e)
         {
-            String masv = txtmasv.Text.Trim();
-            String hoten = txthoten.Text.Trim();
-            String mamon = txtmamon.Text.Trim();
-            String tenmom = txttenmon.Text.Trim();
-            String diemCC = txtdiemCC.Text.Trim();
-            String diemGK = txtdiemGK.Text.Trim();
-            String diemTH = txtdiemTH.Text.Trim();
-            String diemCK = txtdiemCK.Text.Trim();
-            String hocky = cbxhocky.Text.Trim();
-            String lanthi = cbxlanthi.Text.Trim();
+            string masv = txtmasv.Text.Trim();
+            string hoten = txthoten.Text.Trim();
+            string mamon = txtmamon.Text.Trim();
+            string tenmom = txttenmon.Text.Trim();
+            double diemCC = Convert.ToDouble(txtdiemCC.Text.Trim());
+            double diemGK = Convert.ToDouble(txtdiemGK.Text.Trim());
+            double diemTH = Convert.ToDouble(txtdiemTH.Text.Trim());
+            double diemCK = Convert.ToDouble(txtdiemCK.Text.Trim());
+
+            List<object> scores = new List<object>
+            {
+                diemCC,
+                diemGK,
+                diemTH,
+                diemCK
+            };
+
+            ManagerScore_EnviromentVariable.listComponentScore = addScoreToList(scores);
+            double diemTK = professionHandling.getDiemTK_1Mon(ManagerScore_EnviromentVariable.listComponentScore);
+            string diemChu = professionHandling.getDiemChu(diemTK);
+            string danhGia = professionHandling.getDanhGia(diemChu);
 
             using (SqlConnection connection = new SqlConnection(con))
             {
                 connection.Open();
 
-                string query = "insert into Diem Values('" + masv + "',N'" + hoten + "',N'" + mamon + "',N'" + tenmom + "','" + diemCC + "','" + diemGK + "','" + diemTH + "','" + diemCK + "',N'" + hocky + "','" + lanthi + "')";
+                string query = $"insert into Diem Values('{masv}', N'{hoten}', '{mamon}', N'{tenmom}', {diemCC}, {diemGK}, {diemTH}, {diemCK}, {diemTK}, '{diemChu}', '{danhGia}')";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     int i = command.ExecuteNonQuery();
@@ -82,7 +89,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void b_update_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtID.Text.Trim());
             string masv = txtmasv.Text.Trim();
@@ -93,12 +100,11 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             double diemGK = Convert.ToDouble(txtdiemGK.Text);
             double diemTH = Convert.ToDouble(txtdiemTH.Text);
             double diemCK = Convert.ToDouble(txtdiemCK.Text);
-            string lanthi = cbxlanthi.Text.Trim();
             using (SqlConnection connection = new SqlConnection(con))
             {
                 connection.Open();
 
-                string query = "Update Diem set maSinhVien = '" + masv + "', hoTen= N'" + hoten + "',maMon='" + mamon + "',tenMon=N'" + tenmom + "',diemCC='" + diemCC + "',diemGK = '" + diemGK + "',diemTH ='" + diemTH + "',diemCK ='" + diemCK + "',lanThi= '" + lanthi + "' Where ID = '" + id + "'";
+                string query = "Update Diem set maSinhVien = '" + masv + "', hoTen= N'" + hoten + "',maMon='" + mamon + "',tenMon=N'" + tenmom + "',diemCC='" + diemCC + "',diemGK = '" + diemGK + "',diemTH ='" + diemTH + "',diemCK ='" + diemCK + "' Where ID = '" + id + "'";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     try
@@ -132,8 +138,6 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                 txtdiemGK.Text = dgv2.Rows[i].Cells[6].Value.ToString();
                 txtdiemTH.Text = dgv2.Rows[i].Cells[7].Value.ToString();
                 txtdiemCK.Text = dgv2.Rows[i].Cells[8].Value.ToString();
-                cbxhocky.Text = dgv2.Rows[i].Cells[9].Value.ToString();
-                cbxlanthi.Text = dgv2.Rows[i].Cells[10].Value.ToString();
             }
             catch (Exception ex)
             {
@@ -162,5 +166,16 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             load_dgv2();
         }
 
+        private Dictionary<string, object> addScoreToList(List<object> scores)
+        {
+            Dictionary<string, object> listScore = new Dictionary<string, object>();
+
+            for (int i=0; i<scores.Count; i++)
+            {
+                listScore.Add(ModelScore.getFieldName(i+5), scores[i]);
+            }
+
+            return listScore;
+        }
     }
 }
