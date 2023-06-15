@@ -129,5 +129,32 @@ C:\Users\tn937\Source\Repos\DoNgocDong\ManagerPointStudent\Bài Tập Lớn\obj\
 C:\Users\tn937\Source\Repos\DoNgocDong\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.exe
 C:\Users\tn937\Source\Repos\DoNgocDong\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.pdb
 C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Tools.SchoolarShipList.resources
-C:\Users\tn937\Source\Repos\DoNgocDong\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Tools.SchoolarShipList.resources
-C:\Users\tn937\Source\Repos\DoNgocDong\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Actions.ViewProfileStudent.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.exe.config
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.exe
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\bin\Debug\BaiTapLon_CSharp.pdb
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.AssemblyReference.cache
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.SuggestedBindingRedirects.cache
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Manager.ManagerClass.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Manager.ManagerCourse.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Manager.ManagerMajors.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Manager.ManagerScore.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Manager.ManagerStudent.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Actions.ViewForAdmin.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Tools.SchoolarShipList.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Welcome.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.ChangePassword.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.HelpForm.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.LoginForm.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.LoginMethod.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.HomePage.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubFormMonHoc.Sua.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubFormMonHoc.Them.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.ManagerCourse.Xoa.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.ManagerMajors.ManagerMajorsActions.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.ManagerStudent.ManagerStudentActions.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.SubForm.FormRepair.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.Properties.Resources.resources
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.GenerateResource.cache
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.CoreCompileInputs.cache
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.exe
+E:\Học\2 C sharp\BaiTapLon\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.pdb

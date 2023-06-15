@@ -35,16 +35,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnluu = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbhocki = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(238, 33);
+            this.label1.Location = new System.Drawing.Point(272, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(306, 46);
             this.label1.TabIndex = 0;
@@ -85,7 +85,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(51, 136);
+            this.label3.Location = new System.Drawing.Point(51, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 25);
             this.label3.TabIndex = 5;
@@ -96,21 +96,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(51, 177);
+            this.label4.Location = new System.Drawing.Point(51, 179);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 25);
             this.label4.TabIndex = 6;
             this.label4.Text = "Số tín chỉ:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 230);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(726, 182);
-            this.dataGridView1.TabIndex = 7;
             // 
             // btnluu
             // 
@@ -123,13 +113,41 @@
             this.btnluu.UseVisualStyleBackColor = true;
             this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(51, 220);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 25);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Học kì:";
+            // 
+            // cbhocki
+            // 
+            this.cbhocki.FormattingEnabled = true;
+            this.cbhocki.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.cbhocki.Location = new System.Drawing.Point(189, 219);
+            this.cbhocki.Name = "cbhocki";
+            this.cbhocki.Size = new System.Drawing.Size(92, 28);
+            this.cbhocki.TabIndex = 10;
+            // 
             // Them
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(850, 384);
+            this.Controls.Add(this.cbhocki);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnluu);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -138,9 +156,9 @@
             this.Controls.Add(this.txtmamon);
             this.Controls.Add(this.label1);
             this.Name = "Them";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Them";
             this.Load += new System.EventHandler(this.Them_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,7 +173,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnluu;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbhocki;
     }
 }
