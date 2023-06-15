@@ -185,17 +185,21 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
 
         private void grvLop_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i = e.RowIndex;// lấy chỉ số dòng đc click chuột vào
-            txtMalop.Text = grvLop.Rows[i].Cells[0].Value.ToString();
-            txtTenLop.Text = grvLop.Rows[i].Cells[1].Value.ToString();
-            cbMaNganh.Text = grvLop.Rows[i].Cells[2].Value.ToString();
-            txtTenNganh.Text = grvLop.Rows[i].Cells[3].Value.ToString();
-            txtKhoa.Text = grvLop.Rows[i].Cells[4].Value.ToString();
-            txtGVCN.Text = grvLop.Rows[i].Cells[5].Value.ToString(); 
-            btSua.Enabled = true;
-            btXoa.Enabled = true;
-            txtKhoa.Enabled = true; txtMalop.Enabled = false; txtTenLop.Enabled = true;
-            txtGVCN.Enabled = true; cbMaNganh.Enabled = true;
+            try
+            {
+                int i = e.RowIndex;// lấy chỉ số dòng đc click chuột vào
+                txtMalop.Text = grvLop.Rows[i].Cells[0].Value.ToString();
+                txtTenLop.Text = grvLop.Rows[i].Cells[1].Value.ToString();
+                cbMaNganh.Text = grvLop.Rows[i].Cells[2].Value.ToString();
+                txtTenNganh.Text = grvLop.Rows[i].Cells[3].Value.ToString();
+                txtKhoa.Text = grvLop.Rows[i].Cells[4].Value.ToString();
+                txtGVCN.Text = grvLop.Rows[i].Cells[5].Value.ToString();
+                btSua.Enabled = true;
+                btXoa.Enabled = true;
+                txtKhoa.Enabled = true; txtMalop.Enabled = false; txtTenLop.Enabled = true;
+                txtGVCN.Enabled = true; cbMaNganh.Enabled = true;
+            }
+            catch (Exception ex) { }
         }
 
         private void btThoat_Click(object sender, EventArgs e)

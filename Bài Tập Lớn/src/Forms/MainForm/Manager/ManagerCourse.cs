@@ -44,8 +44,6 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
         private void ManagerCourse_Load(object sender, EventArgs e)
         {
             load_DGV();
-
-
         }
 
         private void btnthem_Click(object sender, EventArgs e)
@@ -95,14 +93,11 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                     DGV.Refresh();
                 }
             }
-
-    
-
         }
 
-        private void txttimkiem_TextChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            load_DGV();
         }
     }
 }

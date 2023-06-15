@@ -21,6 +21,7 @@ namespace BaiTapLon_CSharp.src.Models
         public const int diemTK = 9;
         public const int diemChu = 10;
         public const int danhGia = 11;
+        public const int hocKy = 12;
 
         public static string getFieldName(int index)
         {
@@ -50,6 +51,8 @@ namespace BaiTapLon_CSharp.src.Models
                     return "diemChu";
                 case danhGia:
                     return "danhGia";
+                case hocKy:
+                    return "hocKy";
                 default:
                     throw new ArgumentException("Invalid field index value!");
             }

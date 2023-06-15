@@ -22,7 +22,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void Them_Load(object sender, EventArgs e)
         {
 
         }
@@ -58,11 +58,11 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
                 return;
             }
 
-                using (SqlConnection connection = new SqlConnection(stringConnetion))
+            using (SqlConnection connection = new SqlConnection(stringConnetion))
             {
                 connection.Open();
 
-                string query = "insert MonHoc values('" + mamonhoc + "',N'" + tenmonhoc + "'," + sotinchi + "," + hocki + ")";
+                string query = "insert MonHoc values('" + mamonhoc + "', N'" + tenmonhoc + "', " + sotinchi + ", " + hocki + ")";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     cmd.ExecuteNonQuery();
@@ -70,11 +70,6 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
                     this.Close();
                 }
             }
-        }
-
-        private void Them_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

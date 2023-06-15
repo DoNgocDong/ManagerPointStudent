@@ -31,7 +31,6 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
 
             load_dgv2();
             fctl.load_ComboBox(cbbLop, Globals.tableClass, "tenLop", "maLop");
-            fctl.load_ComboBox(cbbTenmon, "MonHoc", "tenMon", "maMon");
         }
         public void load_dgv2()
         {
@@ -59,12 +58,13 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             string hoten = txthoten.Text.Trim();
             string mamon = txtmamon.Text.Trim();
             string tenmon = cbbTenmon.Text.Trim();
-            double diemCC = Convert.ToDouble(txtdiemCC.Text.Trim());
-            double diemGK = Convert.ToDouble(txtdiemGK.Text.Trim());
-            double diemTH = Convert.ToDouble(txtdiemTH.Text.Trim());
-            double diemCK = Convert.ToDouble(txtdiemCK.Text.Trim());
+            float diemCC = Convert.ToSingle(txtdiemCC.Text.Trim());
+            float diemGK = Convert.ToSingle(txtdiemGK.Text.Trim());
+            float diemTH = Convert.ToSingle(txtdiemTH.Text.Trim());
+            float diemCK = Convert.ToSingle(txtdiemCK.Text.Trim());
+            int hocKy = Convert.ToInt32(txtHocKy.Text.Trim());
 
-            List<object> scores = new List<object>
+            List<float> scores = new List<float>
             {
                 diemCC,
                 diemGK,
@@ -72,8 +72,14 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                 diemCK
             };
 
+            List<string> columnName = new List<string>();
+            for(int i=1; i<13; i++)
+            {
+                columnName.Add(ModelScore.getFieldName(i));
+            }
+
             ManagerScore_EnviromentVariable.listComponentScore = addScoreToList(scores);
-            double diemTK = professionHandling.getDiemTK_1Mon(ManagerScore_EnviromentVariable.listComponentScore);
+            float diemTK = professionHandling.getDiemTK_1Mon(ManagerScore_EnviromentVariable.listComponentScore);
             string diemChu = professionHandling.getDiemChu(diemTK);
             string danhGia = professionHandling.getDanhGia(diemChu);
 
@@ -81,7 +87,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             {
                 connection.Open();
 
-                string query = $"insert into Diem Values('{masv}', N'{hoten}', '{mamon}', N'{tenmon}', {diemCC}, {diemGK}, {diemTH}, {diemCK}, {diemTK}, '{diemChu}', '{danhGia}')";
+                string query = $"insert into Diem ({string.Join(", ", columnName)}) Values('{masv}', N'{hoten}', '{mamon}', N'{tenmon}', {diemCC}, {diemGK}, {diemTH}, {diemCK}, {diemTK}, '{diemChu}', '{danhGia}', {hocKy})";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     try
@@ -92,9 +98,12 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                             MessageBox.Show("Thêm thành công");
                             load_dgv2();
                         }
+                        else
+                            MessageBox.Show("Thêm thất bại");
                     }
-                    catch (Exception ex) { 
-                        MessageBox.Show(ex.Message);
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -107,12 +116,13 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             string hoten = txthoten.Text.Trim();
             string mamon = txtmamon.Text.Trim();
             string tenmon = cbbTenmon.Text.Trim();
-            double diemCC = Convert.ToDouble(txtdiemCC.Text);
-            double diemGK = Convert.ToDouble(txtdiemGK.Text);
-            double diemTH = Convert.ToDouble(txtdiemTH.Text);
-            double diemCK = Convert.ToDouble(txtdiemCK.Text);
+            float diemCC = Convert.ToSingle(txtdiemCC.Text);
+            float diemGK = Convert.ToSingle(txtdiemGK.Text);
+            float diemTH = Convert.ToSingle(txtdiemTH.Text);
+            float diemCK = Convert.ToSingle(txtdiemCK.Text);
+            int hocKy = Convert.ToInt32(txtHocKy.Text.Trim());
 
-            List<object> scores = new List<object>
+            List<float> scores = new List<float>
             {
                 diemCC,
                 diemGK,
@@ -120,8 +130,14 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                 diemCK
             };
 
+            List<string> columnName = new List<string>();
+            for (int i = 1; i < 13; i++)
+            {
+                columnName.Add(ModelScore.getFieldName(i));
+            }
+
             ManagerScore_EnviromentVariable.listComponentScore = addScoreToList(scores);
-            double diemTK = professionHandling.getDiemTK_1Mon(ManagerScore_EnviromentVariable.listComponentScore);
+            float diemTK = professionHandling.getDiemTK_1Mon(ManagerScore_EnviromentVariable.listComponentScore);
             string diemChu = professionHandling.getDiemChu(diemTK);
             string danhGia = professionHandling.getDanhGia(diemChu);
 
@@ -130,7 +146,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                 connection.Open();
 
                 string query = $"Update Diem set maSinhVien = '{masv}', hoTen=N'{hoten}', maMon='{mamon}', tenMon=N'{tenmon}', " +
-                    $"diemCC={diemCC}, diemGK={diemGK}, diemTH={diemTH}, diemCK={diemCK}, diemTK={diemTK}, diemChu='{diemChu}', danhGia='{danhGia}'" +
+                    $"diemCC={diemCC}, diemGK={diemGK}, diemTH={diemTH}, diemCK={diemCK}, diemTK={diemTK}, diemChu='{diemChu}', danhGia='{danhGia}', hocKy={hocKy}" +
                     $" Where ID = '" + id + "'";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -146,7 +162,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show(ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -204,11 +220,17 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             List<string> conditions= new List<string> { condition };
 
             fctl.load_ComboBox(cbbMasv, Globals.tableStudent, "maSinhVien", "hoTen", conditions);
+            fctl.load_ComboBox(cbbTenmon, Globals.tableCourse, "tenMon", "maMon");
         }
 
         private void cbbTenmon_TextChanged(object sender, EventArgs e)
         {
             txtmamon.Text = cbbTenmon.SelectedValue.ToString();
+
+            DataTable data = fctl.find(Globals.tableCourse, "hocKy", "maMon", txtmamon.Text);
+
+            if (data != null && data.Rows.Count > 0)
+                txtHocKy.Text = data.Rows[0][0].ToString();
         }
 
         private void cbbMasv_TextChanged(object sender, EventArgs e)
@@ -216,9 +238,9 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             txthoten.Text = cbbMasv.SelectedValue.ToString();
         }
 
-        private Dictionary<string, object> addScoreToList(List<object> scores)
+        private Dictionary<string, float> addScoreToList(List<float> scores)
         {
-            Dictionary<string, object> listScore = new Dictionary<string, object>();
+            Dictionary<string, float> listScore = new Dictionary<string, float>();
 
             for (int i = 0; i < scores.Count; i++)
             {

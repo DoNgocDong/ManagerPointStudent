@@ -37,17 +37,19 @@
             this.maMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soTinChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hocKi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hocKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txttimkiem = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             this.SuspendLayout();
             // 
             // btnthem
             // 
             this.btnthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthem.Location = new System.Drawing.Point(21, 209);
+            this.btnthem.Location = new System.Drawing.Point(14, 136);
+            this.btnthem.Margin = new System.Windows.Forms.Padding(2);
             this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(116, 38);
+            this.btnthem.Size = new System.Drawing.Size(77, 25);
             this.btnthem.TabIndex = 0;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = true;
@@ -56,9 +58,10 @@
             // btnsua
             // 
             this.btnsua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsua.Location = new System.Drawing.Point(175, 209);
+            this.btnsua.Location = new System.Drawing.Point(117, 136);
+            this.btnsua.Margin = new System.Windows.Forms.Padding(2);
             this.btnsua.Name = "btnsua";
-            this.btnsua.Size = new System.Drawing.Size(116, 38);
+            this.btnsua.Size = new System.Drawing.Size(77, 25);
             this.btnsua.TabIndex = 1;
             this.btnsua.Text = "Sửa";
             this.btnsua.UseVisualStyleBackColor = true;
@@ -67,9 +70,10 @@
             // btnxoa
             // 
             this.btnxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnxoa.Location = new System.Drawing.Point(329, 209);
+            this.btnxoa.Location = new System.Drawing.Point(219, 136);
+            this.btnxoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnxoa.Name = "btnxoa";
-            this.btnxoa.Size = new System.Drawing.Size(116, 38);
+            this.btnxoa.Size = new System.Drawing.Size(77, 25);
             this.btnxoa.TabIndex = 2;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
@@ -79,9 +83,10 @@
             // 
             this.btntimkiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btntimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntimkiem.Location = new System.Drawing.Point(1043, 45);
+            this.btntimkiem.Location = new System.Drawing.Point(695, 29);
+            this.btntimkiem.Margin = new System.Windows.Forms.Padding(2);
             this.btntimkiem.Name = "btntimkiem";
-            this.btntimkiem.Size = new System.Drawing.Size(172, 41);
+            this.btntimkiem.Size = new System.Drawing.Size(115, 27);
             this.btntimkiem.TabIndex = 3;
             this.btntimkiem.Text = "Tìm kiếm Tên Môn";
             this.btntimkiem.UseVisualStyleBackColor = true;
@@ -91,9 +96,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(8, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(414, 46);
+            this.label1.Size = new System.Drawing.Size(286, 31);
             this.label1.TabIndex = 4;
             this.label1.Text = "QUẢN LÝ MÔN HỌC";
             // 
@@ -107,12 +113,13 @@
             this.maMon,
             this.tenMon,
             this.soTinChi,
-            this.hocKi});
-            this.DGV.Location = new System.Drawing.Point(2, 266);
+            this.hocKy});
+            this.DGV.Location = new System.Drawing.Point(1, 173);
+            this.DGV.Margin = new System.Windows.Forms.Padding(2);
             this.DGV.Name = "DGV";
             this.DGV.RowHeadersWidth = 62;
             this.DGV.RowTemplate.Height = 28;
-            this.DGV.Size = new System.Drawing.Size(1225, 220);
+            this.DGV.Size = new System.Drawing.Size(817, 143);
             this.DGV.TabIndex = 5;
             // 
             // maMon
@@ -139,28 +146,42 @@
             this.soTinChi.MinimumWidth = 8;
             this.soTinChi.Name = "soTinChi";
             // 
-            // hocKi
+            // hocKy
             // 
-            this.hocKi.DataPropertyName = "hocKi";
-            this.hocKi.HeaderText = "Học kì";
-            this.hocKi.MinimumWidth = 8;
-            this.hocKi.Name = "hocKi";
-            this.hocKi.Width = 150;
+            this.hocKy.DataPropertyName = "hocKy";
+            this.hocKy.HeaderText = "Học kì";
+            this.hocKy.MinimumWidth = 8;
+            this.hocKy.Name = "hocKy";
+            this.hocKy.Width = 150;
             // 
             // txttimkiem
             // 
             this.txttimkiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txttimkiem.Location = new System.Drawing.Point(578, 52);
+            this.txttimkiem.Location = new System.Drawing.Point(385, 34);
+            this.txttimkiem.Margin = new System.Windows.Forms.Padding(2);
             this.txttimkiem.Name = "txttimkiem";
-            this.txttimkiem.Size = new System.Drawing.Size(459, 26);
+            this.txttimkiem.Size = new System.Drawing.Size(307, 20);
             this.txttimkiem.TabIndex = 6;
-            this.txttimkiem.TextChanged += new System.EventHandler(this.txttimkiem_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(730, 136);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(77, 25);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Tải lại";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ManagerCourse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1227, 486);
+            this.ClientSize = new System.Drawing.Size(818, 316);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txttimkiem);
             this.Controls.Add(this.DGV);
             this.Controls.Add(this.label1);
@@ -168,6 +189,7 @@
             this.Controls.Add(this.btnxoa);
             this.Controls.Add(this.btnsua);
             this.Controls.Add(this.btnthem);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ManagerCourse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManagerCourse";
@@ -190,6 +212,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn maMon;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenMon;
         private System.Windows.Forms.DataGridViewTextBoxColumn soTinChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hocKi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hocKy;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -12,42 +12,42 @@ namespace BaiTapLon_CSharp.src.Controller.ProfessionHandling
     {        
         public FinalScore() {}
 
-        public double getDiemTK_1Mon(Dictionary<string, object> listScore)
+        public float getDiemTK_1Mon(Dictionary<string, float> listScore)
         {
-            double diemGK = 00.00;
-            double diemCK = 00.00;
-            double diemTP = 00.00;
+            float diemGK = 0f;
+            float diemCK = 0f;
+            float diemTP = 0f;
 
             foreach (var score in listScore) {
                 if (score.Key == "diemCK")
-                    diemCK += Convert.ToSingle(score.Value) * 0.7;
+                    diemCK += Convert.ToSingle(score.Value) * 0.7f;
                 else if (score.Key == "diemGK")
-                    diemGK += Convert.ToSingle(score.Value) * 0.2;
+                    diemGK += Convert.ToSingle(score.Value) * 0.2f;
                 else
                     diemTP += Convert.ToSingle(score.Value);
             }
-            diemTP = (diemTP / 2.0) * 0.1;
+            diemTP = (diemTP / 2.0f) * 0.1f;
 
-            double data = diemCK + diemGK + diemTP;
+            float data = diemCK + diemGK + diemTP;
 
             return data;
         }
 
-        public string getDiemChu(double diemTK)
+        public string getDiemChu(float diemTK)
         {
-            if (diemTK >= 8.5)
+            if (diemTK >= 8.5f)
                 return DiemChu.getFieldName(DiemChu.A);
-            else if(diemTK >= 8.0)
+            else if(diemTK >= 8.0f)
                 return DiemChu.getFieldName(DiemChu.B_plus);
-            else if (diemTK >= 7.0)
+            else if (diemTK >= 7.0f)
                 return DiemChu.getFieldName(DiemChu.B);
-            else if (diemTK >= 6.5)
+            else if (diemTK >= 6.5f)
                 return DiemChu.getFieldName(DiemChu.C_plus);
-            else if (diemTK >= 5.5)
+            else if (diemTK >= 5.5f)
                 return DiemChu.getFieldName(DiemChu.C);
-            else if (diemTK >= 5.0)
+            else if (diemTK >= 5.0f)
                 return DiemChu.getFieldName(DiemChu.D_plus);
-            else if (diemTK >= 4.0)
+            else if (diemTK >= 4.0f)
                 return DiemChu.getFieldName(DiemChu.D);
             else
                 return DiemChu.getFieldName(DiemChu.F);

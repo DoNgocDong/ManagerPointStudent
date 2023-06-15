@@ -42,18 +42,15 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
         {
             load_DGV();
         }
-        private void DGV_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-            private void btnsua_Click(object sender, EventArgs e)
+
+        private void btnsua_Click(object sender, EventArgs e)
         {
             string mm = txtmamon.Text.Trim();
-            if(mm=="")
+            if (mm == "")
             {
                 MessageBox.Show("Chọn Môn cần sửa!");
                 return;
-            }    
+            }
 
             string mmmoi = txtmmmoi.Text.Trim();
             if (mmmoi == "")
@@ -82,7 +79,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
             {
                 connection.Open();
 
-                string query = "update MonHoc set maMon='" + mmmoi + "',tenMon='" + tmmoi + "',soTinChi=" + stcmoi +",hocKi="+hocki+ " where maMon='" + mm + "'";
+                string query = "update MonHoc set maMon='" + mmmoi + "', tenMon=N'" + tmmoi + "', soTinChi=" + stcmoi + ", hocKi=" + hocki + " where maMon='" + mm + "'";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     cmd.ExecuteNonQuery();
@@ -94,16 +91,20 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
 
         private void DGV_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            int i = e.RowIndex; //lấy chỉ số dòng dc click
-            txtmamon.Text = DGV.Rows[i].Cells[0].Value.ToString();
-            txttenmon.Text = DGV.Rows[i].Cells[1].Value.ToString();
-            txtsotinchi.Text = DGV.Rows[i].Cells[2].Value.ToString();
-            txthocki.Text = DGV.Rows[i].Cells[3].Value.ToString();
-            
-            txtmmmoi.Text = txtmamon.Text;
-            txttmmoi.Text = txttenmon.Text;
-            txtstcmoi.Text = txtsotinchi.Text;
-            cbhocki.Text = txthocki.Text;
+            try
+            {
+                int i = e.RowIndex; //lấy chỉ số dòng dc click
+                txtmamon.Text = DGV.Rows[i].Cells[0].Value.ToString();
+                txttenmon.Text = DGV.Rows[i].Cells[1].Value.ToString();
+                txtsotinchi.Text = DGV.Rows[i].Cells[2].Value.ToString();
+                txthocki.Text = DGV.Rows[i].Cells[3].Value.ToString();
+
+                txtmmmoi.Text = txtmamon.Text;
+                txttmmoi.Text = txttenmon.Text;
+                txtstcmoi.Text = txtsotinchi.Text;
+                cbhocki.Text = txthocki.Text;
+            }
+            catch(Exception ex) {}
         }
     }
 }

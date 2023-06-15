@@ -45,18 +45,17 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerCourse
 
         }
 
-        private void DGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void DGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i = e.RowIndex; //lấy chỉ số dòng dc click
-            txtmamon.Text = DGV.Rows[i].Cells[0].Value.ToString();
-            txttenmon.Text = DGV.Rows[i].Cells[1].Value.ToString();
-            txtsotinchi.Text = DGV.Rows[i].Cells[2].Value.ToString();
-            txthocki.Text = DGV.Rows[i].Cells[3].Value.ToString();
+            try
+            {
+                int i = e.RowIndex; //lấy chỉ số dòng dc click
+                txtmamon.Text = DGV.Rows[i].Cells[0].Value.ToString();
+                txttenmon.Text = DGV.Rows[i].Cells[1].Value.ToString();
+                txtsotinchi.Text = DGV.Rows[i].Cells[2].Value.ToString();
+                txthocki.Text = DGV.Rows[i].Cells[3].Value.ToString();
+            }
+            catch(Exception ex) {}
         }
 
         private void button1_Click(object sender, EventArgs e)
