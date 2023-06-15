@@ -33,6 +33,25 @@ namespace BaiTapLon_CSharp.src.Database
             }
         }
 
+        public DataTable find(string tableToFind, string getValue, List<string> condition)
+        {
+            string query = $"select {getValue} from {tableToFind} where {string.Join(" and ", condition)}";
+
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable data = new DataTable();
+                    adapter.Fill(data);
+
+                    return data;
+                }
+            }
+        }
+
         public DataTable find(string tableToFind, List<string> getValue, string fieldCondition, string keyword)
         {
             string query = $"select {string.Join(", ", getValue)} from {tableToFind} where {fieldCondition} like '%{keyword}%'";

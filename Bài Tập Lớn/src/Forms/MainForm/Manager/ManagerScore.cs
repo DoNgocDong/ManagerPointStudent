@@ -23,7 +23,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
         {
             InitializeComponent();
         }
-        private void Add_Load(object sender, EventArgs e)
+        private void ManagerScore_Load(object sender, EventArgs e)
         {
             load_dgv2();
             fctl.load_ComboBox(txttenmon, "MonHoc", "tenMon", "maMon");
@@ -89,7 +89,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void b_update_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtID.Text.Trim());
             string masv = txtmasv.Text.Trim();

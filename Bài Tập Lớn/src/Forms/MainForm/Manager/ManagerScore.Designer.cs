@@ -160,7 +160,7 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "Sửa thông tin";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.b_update_Click);
             // 
             // txtID
             // 
@@ -519,7 +519,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ManagerScore";
             this.Text = "Add";
-            this.Load += new System.EventHandler(this.Add_Load);
+            this.Load += new System.EventHandler(this.ManagerScore_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).EndInit();

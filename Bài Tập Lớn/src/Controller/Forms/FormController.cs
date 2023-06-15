@@ -57,6 +57,13 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
             dgv.Refresh();
         }
 
+        public void load_DataGridViewWithCondition(DataGridView dgv, string tableName, List<string> condition)
+        {
+            DataTable data = this.find(tableName, "*", condition);
+            dgv.DataSource = data;
+            dgv.Refresh();
+        }
+
         public void load_ComboBox(ComboBox cbBox, string tableName, string displayMemberColumn, string ValueMemberColumn)
         {
             DataTable data = this.findAll(tableName);
@@ -64,6 +71,11 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
 
             cbBox.DisplayMember = displayMemberColumn;
             cbBox.ValueMember = ValueMemberColumn;
+        }
+
+        public DataTable find(string tableToFind, string getValue, List<string> condition)
+        {
+            return databaseQuery.find(tableToFind, getValue, condition);
         }
 
         public DataTable find(string tableToFind, string getValue, string fieldCondition, string keyword)

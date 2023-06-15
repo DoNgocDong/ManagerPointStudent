@@ -22,6 +22,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerStudent
 
         private void ActionDetail_Load(object sender, EventArgs e)
         {
+            formController.load_ComboBox(lopComboBox, Globals.tableClass, "tenLop", "maLop");
             setUpDisplay(isAddStudentAction);
         }
 
@@ -39,7 +40,6 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerStudent
         {
             if(check){
                 actionBtn.Text = "Thêm Sinh Viên";
-                formController.load_ComboBox(lopComboBox, Globals.tableClass, "tenLop", "maLop");
             }
             else{
                 maSinhVienTextBox.Enabled = false;
