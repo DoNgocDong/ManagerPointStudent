@@ -87,7 +87,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             {
                 connection.Open();
 
-                string query = $"insert into Diem ({string.Join(", ", columnName)}) Values('{masv}', N'{hoten}', '{mamon}', N'{tenmon}', {diemCC}, {diemGK}, {diemTH}, {diemCK}, {diemTK}, '{diemChu}', '{danhGia}', {hocKy})";
+                string query = $"insert into Diem ({string.Join(", ", columnName)}) Values('{masv}', N'{hoten}', '{mamon}', N'{tenmon}', {diemCC}, {diemGK}, {diemTH}, {diemCK}, {diemTK.ToString().Replace(",", ".")}, '{diemChu}', '{danhGia}', {hocKy})";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     try
@@ -103,7 +103,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                     }
                     catch(Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(diemTK.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
