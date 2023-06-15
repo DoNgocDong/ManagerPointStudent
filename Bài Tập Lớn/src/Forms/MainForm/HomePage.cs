@@ -1,6 +1,7 @@
 ﻿using BaiTapLon_CSharp.src.Controller.Forms;
 using BaiTapLon_CSharp.src.Forms.MainForm.Actions;
 using BaiTapLon_CSharp.src.Forms.MainForm.Manager;
+using BaiTapLon_CSharp.src.Forms.MainForm.Tools;
 using BaiTapLon_CSharp.src.Forms.SubForm;
 using System;
 using System.Windows.Forms;
@@ -16,8 +17,11 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
         }
         private void HomePage_Load(object sender, EventArgs e)
         {
-            if(Globals.isAdmin == false)
+            if (Globals.isAdmin == false)
+            {
                 managerToolStripMenuItem.Visible = false;
+                toolsMenuItem.Visible = false;
+            }
 
             Welcome welcome = new Welcome();
             formController.addForm(welcome, displayMenuFormPanel);
@@ -119,6 +123,20 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm
             ManagerMajors managerMajors = new ManagerMajors();
 
             formController.addForm(managerMajors, displayMenuFormPanel);
+        }
+
+        private void scholarshipMenuItem_Click(object sender, EventArgs e)
+        {
+            SchoolarShipList schoolarShipList = new SchoolarShipList();
+
+            formController.addForm(schoolarShipList, displayMenuFormPanel);
+        }
+
+        private void OverallRatingMenuItem_Click(object sender, EventArgs e)
+        {
+            OverallRating overallRating = new OverallRating();
+
+            formController.addForm(overallRating, displayMenuFormPanel);
         }
     }
 }

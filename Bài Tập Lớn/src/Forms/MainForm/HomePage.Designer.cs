@@ -46,6 +46,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.displayMenuFormPanel = new System.Windows.Forms.Panel();
+            this.OverallRatingMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -178,6 +179,7 @@
             // 
             this.toolsMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.toolsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OverallRatingMenuItem,
             this.scholarshipMenuItem});
             this.toolsMenuItem.Name = "toolsMenuItem";
             this.toolsMenuItem.Size = new System.Drawing.Size(64, 19);
@@ -188,6 +190,7 @@
             this.scholarshipMenuItem.Name = "scholarshipMenuItem";
             this.scholarshipMenuItem.Size = new System.Drawing.Size(180, 22);
             this.scholarshipMenuItem.Text = "Xét học bổng";
+            this.scholarshipMenuItem.Click += new System.EventHandler(this.scholarshipMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -220,6 +223,13 @@
             this.displayMenuFormPanel.Size = new System.Drawing.Size(872, 440);
             this.displayMenuFormPanel.TabIndex = 4;
             // 
+            // OverallRatingMenuItem
+            // 
+            this.OverallRatingMenuItem.Name = "OverallRatingMenuItem";
+            this.OverallRatingMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.OverallRatingMenuItem.Text = "Đánh giá thành tích";
+            this.OverallRatingMenuItem.Click += new System.EventHandler(this.OverallRatingMenuItem_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,7 +240,7 @@
             this.Controls.Add(this.displayMenuFormPanel);
             this.Controls.Add(this.mainMenu);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomePage";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RightToLeftLayout = true;
@@ -263,5 +273,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scholarshipMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manaMajorsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem OverallRatingMenuItem;
     }
 }

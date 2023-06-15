@@ -104,7 +104,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                     }
                     catch(Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(diemTK.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

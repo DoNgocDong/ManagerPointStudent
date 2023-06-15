@@ -122,7 +122,7 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
             return databaseQuery.count(tableToCount, fieldCondition, keyword);
         }
 
-        public DataTable topList(string size, string tableName, string compareField)
+        public DataTable topList(int size, string tableName, string compareField)
         {
             return databaseQuery.topList(size, tableName, compareField);
         }

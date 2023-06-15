@@ -33,6 +33,20 @@ namespace BaiTapLon_CSharp.src.Controller.ProfessionHandling
             return data;
         }
 
+        public float getDiemTK_list(List<float> listScore)
+        {
+            float data = 0f;
+
+            foreach(var score in listScore)
+            {
+                data += score;
+            }
+
+            data /= listScore.Count;
+
+            return data;
+        }
+
         public string getDiemChu(float diemTK)
         {
             if (diemTK >= 8.5f)

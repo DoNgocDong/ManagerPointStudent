@@ -36,20 +36,28 @@ namespace BaiTapLon_CSharp.src.Database
         //Select 1 hoặc nhiều bản ghi với nhiều điều kiện
         public DataTable find(string tableToFind, string getValue, List<string> condition)
         {
-            string query = $"select {getValue} from {tableToFind} where {string.Join(" and ", condition)}";
-
-            using (SqlConnection connection = new SqlConnection(stringConnection))
+            try
             {
-                connection.Open();
+                string query = $"select {getValue} from {tableToFind} where {string.Join(" and ", condition)}";
 
-                using (SqlCommand cmd = new SqlCommand(query, connection))
+                using (SqlConnection connection = new SqlConnection(stringConnection))
                 {
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable data = new DataTable();
-                    adapter.Fill(data);
+                    connection.Open();
 
-                    return data;
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        DataTable data = new DataTable();
+                        adapter.Fill(data);
+
+                        return data;
+                    }
                 }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
         }
 
@@ -218,7 +226,7 @@ namespace BaiTapLon_CSharp.src.Database
             }
         }
 
-        public DataTable topList(string size, string tableName, string compareField)
+        public DataTable topList(int size, string tableName, string compareField)
         {
             string query = $"select top {size} * from {tableName} ORDER BY {compareField} DESC";
 
