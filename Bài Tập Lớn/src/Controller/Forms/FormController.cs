@@ -71,6 +71,11 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
             return databaseQuery.find(tableToFind, getValue, fieldCondition, keyword);
         }
 
+        public DataTable find(string tableToFind, List<string> getValue, string fieldCondition, string keyword)
+        {
+            return databaseQuery.find(tableToFind, getValue, fieldCondition, keyword);
+        }
+
         public DataTable findAll(string tableToFind)
         {
             return databaseQuery.findAll(tableToFind);

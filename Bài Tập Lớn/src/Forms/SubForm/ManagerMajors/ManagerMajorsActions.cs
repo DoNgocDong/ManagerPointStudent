@@ -82,7 +82,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerMajors
 
             for (int i = 0; i < values.Count; i++)
             {
-                columnValues.Add(ModelStudent.getFieldName(i), values[i]);
+                columnValues.Add(ModelMajors.getFieldName(i), values[i]);
             }
 
             controller.create(tableName, columnValues);
@@ -106,7 +106,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerMajors
 
             for (int i = 0; i < values.Count; i++)
             {
-                columnValues.Add(ModelStudent.getFieldName(i), values[i]);
+                columnValues.Add(ModelMajors.getFieldName(i), values[i]);
             }
 
             string condition = $"{primaryKey} = '{ManagerMajors_EnviromentVariable.selectedMaNganh}'";

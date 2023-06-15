@@ -33,6 +33,25 @@ namespace BaiTapLon_CSharp.src.Database
             }
         }
 
+        public DataTable find(string tableToFind, List<string> getValue, string fieldCondition, string keyword)
+        {
+            string query = $"select {string.Join(", ", getValue)} from {tableToFind} where {fieldCondition} like '%{keyword}%'";
+
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable data = new DataTable();
+                    adapter.Fill(data);
+
+                    return data;
+                }
+            }
+        }
+
         //select tất cả bản ghi trong bảng 'tableToFind'
         public DataTable findAll(string tableToFind)
         {
@@ -82,7 +101,7 @@ namespace BaiTapLon_CSharp.src.Database
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Thêm thất bại!!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"---Thêm thất bại!!---\n{ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -126,7 +145,7 @@ namespace BaiTapLon_CSharp.src.Database
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Cập nhật thất bại!!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"---Cập nhật thất bại!!---\n{ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -153,7 +172,7 @@ namespace BaiTapLon_CSharp.src.Database
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Xóa thất bại!!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"---Xóa thất bại!!---\n{ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }

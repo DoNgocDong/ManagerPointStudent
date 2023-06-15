@@ -128,3 +128,4 @@ C:\Users\tn937\Source\Repos\DoNgocDong\ManagerPointStudent\Bài Tập Lớn\obj\
 C:\Users\tn937\Source\Repos\DoNgocDong\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.csproj.CoreCompileInputs.cache
 C:\Users\tn937\Source\Repos\DoNgocDong\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.exe
 C:\Users\tn937\Source\Repos\DoNgocDong\ManagerPointStudent\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.pdb
+C:\Users\ngocd\OneDrive\Tài liệu\Môn học\lập trình C#\Project C#\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\BaiTapLon_CSharp.src.Forms.MainForm.Tools.SchoolarShipList.resources

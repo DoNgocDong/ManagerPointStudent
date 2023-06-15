@@ -88,6 +88,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(12, 241);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
@@ -102,12 +103,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(53, 276);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(326, 21);
+            this.label7.Size = new System.Drawing.Size(342, 21);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Đông:    Làm chức năng quản lý Sinh Viên";
+            this.label7.Text = "Đông:    Làm chức năng quản lý Sinh Viên,...";
             // 
             // label6
             // 
@@ -116,12 +118,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(53, 374);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(395, 21);
+            this.label6.Size = new System.Drawing.Size(374, 21);
             this.label6.TabIndex = 7;
-            this.label6.Text = "Long:    Làm chức năng đăng nhập, đổi mật khẩu,...";
+            this.label6.Text = "Long:    Làm chức năng quản lý chuyên ngành,...";
             // 
             // label8
             // 
@@ -130,12 +133,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(53, 350);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(343, 21);
+            this.label8.Size = new System.Drawing.Size(359, 21);
             this.label8.TabIndex = 8;
-            this.label8.Text = "Tuấn Anh:    Làm chức năng quản lý Lớp học";
+            this.label8.Text = "Tuấn Anh:    Làm chức năng quản lý Lớp học,...";
             // 
             // label9
             // 
@@ -144,12 +148,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(53, 325);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(289, 21);
+            this.label9.Size = new System.Drawing.Size(305, 21);
             this.label9.TabIndex = 9;
-            this.label9.Text = "Tuấn:    Làm chức năng quản lý Điểm";
+            this.label9.Text = "Tuấn:    Làm chức năng quản lý Điểm,...";
             // 
             // label10
             // 
@@ -158,12 +163,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(53, 300);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(309, 21);
+            this.label10.Size = new System.Drawing.Size(325, 21);
             this.label10.TabIndex = 10;
-            this.label10.Text = "Đức:    Làm chức năng quản lý Môn học";
+            this.label10.Text = "Đức:    Làm chức năng quản lý Môn học,...";
             // 
             // HelpForm
             // 

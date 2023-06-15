@@ -50,6 +50,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,6 +64,7 @@
   <ItemGroup>
     <Compile Include="src\Controller\Forms\FormController.cs" />
     <Compile Include="src\Controller\Login\LoginController.cs" />
+    <Compile Include="src\Controller\ProfessionHandling\FinalScore.cs" />
     <Compile Include="src\Database\Services.cs" />
     <Compile Include="src\Database\ConnectDB.cs" />
     <Compile Include="src\Forms\MainForm\Manager\ManagerClass.cs">
@@ -112,6 +114,12 @@
     </Compile>
     <Compile Include="src\Forms\MainForm\Actions\ViewScoreStudent.Designer.cs">
       <DependentUpon>ViewScoreStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\Tools\SchoolarShipList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\MainForm\Tools\SchoolarShipList.Designer.cs">
+      <DependentUpon>SchoolarShipList.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Forms\MainForm\Welcome.cs">
       <SubType>Form</SubType>
@@ -168,6 +176,7 @@
       <DependentUpon>ManagerMajorsActions.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Forms\SubForm\ManagerMajors\ManagerMajors.varEnv.cs" />
+    <Compile Include="src\Forms\SubForm\ManagerScore\ManagerScore.varEnv.cs" />
     <Compile Include="src\Forms\SubForm\ManagerStudent\ManagerStudentActions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +204,8 @@
     <Compile Include="src\Models\ModelCourse.cs" />
     <Compile Include="src\Models\ModelScore.cs" />
     <Compile Include="src\Models\ModelStudent.cs" />
+    <Compile Include="src\Models\Reviews\DanhGia.cs" />
+    <Compile Include="src\Models\Reviews\DiemChu.cs" />
     <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="src\Forms\MainForm\Manager\ManagerClass.resx">
@@ -214,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\MainForm\Actions\ViewForAdmin.resx">
       <DependentUpon>ViewForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Forms\MainForm\Tools\SchoolarShipList.resx">
+      <DependentUpon>SchoolarShipList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\MainForm\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
@@ -355,8 +369,6 @@
   <ItemGroup>
     <None Include="Resources\Untitled-1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\Forms\MainForm\Tools\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
