@@ -1,0 +1,13 @@
+C:\Users\tn937\Desktop\Tài liệu Học Tập\C#\bài tập\Bài Tập Lớn\Bài Tập Lớn\bin\Debug\Bài Tập Lớn.exe.config
+C:\Users\tn937\Desktop\Tài liệu Học Tập\C#\bài tập\Bài Tập Lớn\Bài Tập Lớn\bin\Debug\Bài Tập Lớn.exe
+C:\Users\tn937\Desktop\Tài liệu Học Tập\C#\bài tập\Bài Tập Lớn\Bài Tập Lớn\bin\Debug\Bài Tập Lớn.pdb
+C:\Users\tn937\Desktop\Tài liệu Học Tập\C#\bài tập\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\Bài Tập Lớn.csproj.AssemblyReference.cache
+C:\Users\tn937\Desktop\Tài liệu Học Tập\C#\bài tập\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\Bài Tập Lớn.csproj.SuggestedBindingRedirects.cache
+C:\Users\tn937\Desktop\Tài liệu Học Tập\C#\bài tập\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\Bài_Tập_Lớn.Form1.resources
+C:\Users\tn937\Desktop\Tài liệu Học Tập\C#\bài tập\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\Bài_Tập_Lớn.Properties.Resources.resources
+C:\Users\tn937\Desktop\Tài liệu Học Tập\C#\bài tập\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\Bài Tập Lớn.csproj.GenerateResource.cache
+C:\Users\tn937\Desktop\Tài liệu Học Tập\C#\bài tập\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\Bài Tập Lớn.csproj.CoreCompileInputs.cache
+C:\Users\tn937\Desktop\Tài liệu Học Tập\C#\bài tập\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\Bài Tập Lớn.exe
+C:\Users\tn937\Desktop\Tài liệu Học Tập\C#\bài tập\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\Bài Tập Lớn.pdb
+C:\Users\tn937\Desktop\Tài liệu Học Tập\C#\bài tập\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\Bài_Tập_Lớn.Form2.resources
+C:\Users\tn937\Desktop\Tài liệu Học Tập\C#\bài tập\Bài Tập Lớn\Bài Tập Lớn\obj\Debug\Bài_Tập_Lớn.FormRepair.resources
