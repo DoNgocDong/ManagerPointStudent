@@ -208,6 +208,9 @@
     <Compile Include="src\Models\Reviews\DiemChu.cs" />
     <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="src\Forms\MainForm\Actions\ViewProfileStudent.resx">
+      <DependentUpon>ViewProfileStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Forms\MainForm\Manager\ManagerClass.resx">
       <DependentUpon>ManagerClass.cs</DependentUpon>
     </EmbeddedResource>
