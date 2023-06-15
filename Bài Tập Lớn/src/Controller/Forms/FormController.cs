@@ -117,6 +117,16 @@ namespace BaiTapLon_CSharp.src.Controller.Forms
             return databaseQuery.delete(tableName, fieldCondition, keyword);
         }
 
+        public int count(string tableToCount, string fieldCondition, string keyword)
+        {
+            return databaseQuery.count(tableToCount, fieldCondition, keyword);
+        }
+
+        public DataTable topList(string size, string tableName, string compareField)
+        {
+            return databaseQuery.topList(size, tableName, compareField);
+        }
+
         public bool checkExistValueInDatabase(string keyword, string compareFieldName, string compareTableName)
         {
             return databaseQuery.checkExistValueInDatabase(keyword, compareFieldName, compareTableName);

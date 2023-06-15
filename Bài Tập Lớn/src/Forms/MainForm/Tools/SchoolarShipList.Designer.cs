@@ -76,7 +76,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.displaySchoolarShipListDgv);
             this.Name = "SchoolarShipList";
-            this.Text = "SchoolarShipList";
+            this.Text = "danh sách học bổng";
             ((System.ComponentModel.ISupportInitialize)(this.displaySchoolarShipListDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

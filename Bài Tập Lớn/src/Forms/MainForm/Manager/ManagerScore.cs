@@ -87,7 +87,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
             {
                 connection.Open();
 
-                string query = $"insert into Diem ({string.Join(", ", columnName)}) Values('{masv}', N'{hoten}', '{mamon}', N'{tenmon}', {diemCC}, {diemGK}, {diemTH}, {diemCK}, {diemTK}, '{diemChu}', '{danhGia}', {hocKy})";
+                string query = $"insert into Diem ({string.Join(", ", columnName)}) Values('{masv}', N'{hoten}', '{mamon}', N'{tenmon}', {diemCC}, {diemGK}, {diemTH}, {diemCK}, {diemTK.ToString().Replace(",", ".")}, '{diemChu}', '{danhGia}', {hocKy})";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     try
@@ -96,6 +96,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                         if (i > 0)
                         {
                             MessageBox.Show("Thêm thành công");
+                            MessageBox.Show(query);
                             load_dgv2();
                         }
                         else

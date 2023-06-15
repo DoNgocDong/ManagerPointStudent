@@ -200,23 +200,42 @@ namespace BaiTapLon_CSharp.src.Database
             }
         }
 
-/*        public int count(string tableToCount, )
+        public int count(string tableToCount, string fieldCondition, string keyword)
         {
             using (SqlConnection connection = new SqlConnection(stringConnection))
             {
                 connection.Open();
 
-                string query = $"SELECT COUNT(*) FROM {compareTableName} WHERE {compareFieldName} = @keyword";
+                string query = $"SELECT COUNT(*) FROM {tableToCount} WHERE {fieldCondition} = @keyword";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@keyword", keyword);
 
                     int count = (int)command.ExecuteScalar();
 
-                    return count > 0;
+                    return count;
                 }
             }
-        }*/
+        }
+
+        public DataTable topList(string size, string tableName, string compareField)
+        {
+            string query = $"select top {size} * from {tableName} ORDER BY {compareField} DESC";
+
+            using (SqlConnection connection = new SqlConnection(stringConnection))
+            {
+                connection.Open();
+
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable data = new DataTable();
+                    adapter.Fill(data);
+
+                    return data;
+                }
+            }
+        }
 
         public bool checkExistValueInDatabase(string keyword, string compareFieldName, string compareTableName)
         {

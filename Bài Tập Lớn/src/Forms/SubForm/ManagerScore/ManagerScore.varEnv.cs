@@ -9,6 +9,6 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerScore
     public static class ManagerScore_EnviromentVariable
     {
         public static Dictionary<string, float> listComponentScore;
-        public static Dictionary<string, float> listEndScoreOfCourse;
+        public static Dictionary<string, float> listOverallRating;
     }
 }
