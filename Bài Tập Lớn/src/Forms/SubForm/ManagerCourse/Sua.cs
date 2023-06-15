@@ -76,12 +76,13 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
                 MessageBox.Show("Phải nhập số tín chỉ!");
                 return;
             }
+            string hocki = cbhocki.Text.ToString();
 
             using (SqlConnection connection = new SqlConnection(stringConnetion))
             {
                 connection.Open();
 
-                string query = "update MonHoc set maMon='" + mmmoi + "',tenMon='" + tmmoi + "',soTinChi=" + stcmoi + " where maMon='" + mm + "'";
+                string query = "update MonHoc set maMon='" + mmmoi + "',tenMon='" + tmmoi + "',soTinChi=" + stcmoi +",hocKi="+hocki+ " where maMon='" + mm + "'";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     cmd.ExecuteNonQuery();
@@ -97,6 +98,12 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
             txtmamon.Text = DGV.Rows[i].Cells[0].Value.ToString();
             txttenmon.Text = DGV.Rows[i].Cells[1].Value.ToString();
             txtsotinchi.Text = DGV.Rows[i].Cells[2].Value.ToString();
+            txthocki.Text = DGV.Rows[i].Cells[3].Value.ToString();
+            
+            txtmmmoi.Text = txtmamon.Text;
+            txttmmoi.Text = txttenmon.Text;
+            txtstcmoi.Text = txtsotinchi.Text;
+            cbhocki.Text = txthocki.Text;
         }
     }
 }

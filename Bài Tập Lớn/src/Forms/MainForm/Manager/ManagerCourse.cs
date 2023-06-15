@@ -99,5 +99,10 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
     
 
         }
+
+        private void txttimkiem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

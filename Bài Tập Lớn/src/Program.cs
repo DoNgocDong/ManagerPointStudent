@@ -1,4 +1,5 @@
 ﻿using BaiTapLon_CSharp.src.Forms.MainForm;
+using BaiTapLon_CSharp.src.Forms.MainForm.Actions;
 using BaiTapLon_CSharp.src.Forms.MainForm.Manager;
 using System;
 using System.Windows.Forms;
@@ -15,7 +16,7 @@ namespace BaiTapLon_CSharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginMethod());
+            Application.Run(new ViewProfileStudent());
         }
     }
 }

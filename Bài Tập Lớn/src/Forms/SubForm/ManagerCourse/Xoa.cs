@@ -56,6 +56,7 @@ namespace BaiTapLon_CSharp.src.Forms.SubForm.ManagerCourse
             txtmamon.Text = DGV.Rows[i].Cells[0].Value.ToString();
             txttenmon.Text = DGV.Rows[i].Cells[1].Value.ToString();
             txtsotinchi.Text = DGV.Rows[i].Cells[2].Value.ToString();
+            txthocki.Text = DGV.Rows[i].Cells[3].Value.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)

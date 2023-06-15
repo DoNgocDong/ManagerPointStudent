@@ -50,12 +50,19 @@ namespace BaiTapLon_CSharp.src.Forms.SubFormMonHoc
                 MessageBox.Show("Phải nhập mã môn!");
                 return;
             }
+            string hocki = cbhocki.SelectedItem.ToString();
+            if (hocki == "")
+            {
+                cbhocki.Focus();
+                MessageBox.Show("Chọn học kì!");
+                return;
+            }
 
-            using (SqlConnection connection = new SqlConnection(stringConnetion))
+                using (SqlConnection connection = new SqlConnection(stringConnetion))
             {
                 connection.Open();
 
-                string query = "insert MonHoc values('" + mamonhoc + "','" + tenmonhoc + "'," + sotinchi + ")";
+                string query = "insert MonHoc values('" + mamonhoc + "',N'" + tenmonhoc + "'," + sotinchi + "," + hocki + ")";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     cmd.ExecuteNonQuery();
