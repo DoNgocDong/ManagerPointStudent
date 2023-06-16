@@ -96,7 +96,6 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                         if (i > 0)
                         {
                             MessageBox.Show("Thêm thành công");
-                            MessageBox.Show(query);
                             load_dgv2();
                         }
                         else
@@ -104,7 +103,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                     }
                     catch(Exception ex)
                     {
-                        MessageBox.Show(diemTK.ToString(), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -147,7 +146,7 @@ namespace BaiTapLon_CSharp.src.Forms.MainForm.Manager
                 connection.Open();
 
                 string query = $"Update Diem set maSinhVien = '{masv}', hoTen=N'{hoten}', maMon='{mamon}', tenMon=N'{tenmon}', " +
-                    $"diemCC={diemCC}, diemGK={diemGK}, diemTH={diemTH}, diemCK={diemCK}, diemTK={diemTK}, diemChu='{diemChu}', danhGia='{danhGia}', hocKy={hocKy}" +
+                    $"diemCC={diemCC}, diemGK={diemGK}, diemTH={diemTH}, diemCK={diemCK}, diemTK={diemTK.ToString().Replace(",", ".")}, diemChu='{diemChu}', danhGia='{danhGia}', hocKy={hocKy}" +
                     $" Where ID = '" + id + "'";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
